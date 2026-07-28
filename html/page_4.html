@@ -1,0 +1,2103 @@
+<html lang="en" style="--primary: #FFD41D; --primary-foreground: #111111; --primary-rgb: 255 212 29; --site-header-offset: 154px;">
+ <head>
+  <script>
+   globalThis.__integrationMeta = {};
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <title>
+   Speakers | Gadhub
+  </title>
+  <meta content="undefined" name="description"/>
+  <meta content="Speakers | Gadhub" property="og:title"/>
+  <meta content="undefined" property="og:description"/>
+  <meta content="https://cdn.xpress.site/697dbc21b8eab2d421762180/697f398cb8eab2d4217624ec" property="og:image"/>
+  <meta content="https://cdn.xpress.site/697dbc21b8eab2d421762180/697f398cb8eab2d4217624ec" name="twitter:image"/>
+  <meta content="Speakers | Gadhub" name="twitter:title"/>
+  <meta content="undefined" name="twitter:description"/>
+  <link href="https://cdn.xpress.site/697dbc21b8eab2d421762180/6a570a97d63f94d0dc4b8feb" rel="icon"/>
+  <link href="https://cdn.xpress.site/697dbc21b8eab2d421762180/6a570a97d63f94d0dc4b8feb" rel="shortcut icon"/>
+  <link href="https://cdn.xpress.site/697dbc21b8eab2d421762180/6a570a97d63f94d0dc4b8feb" rel="apple-touch-icon"/>
+  <meta content="light" name="color-scheme"/>
+  <script src="js/tailwind.js">
+  </script>
+  <link href="css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'IBM-Plex-Sans', 'Segoe UI', sans-serif;
+        color: var(--foreground);
+        background: var(--background);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        font-family: 'Urbanist', 'IBM-Plex-Sans', 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+
+    .font-urbanist {
+        font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .font-ibm-plex-sans {
+        font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .font-inter {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .gradient-bg {
+        background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    }
+
+    .product-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: var(--surface);
+        overflow: hidden;
+    }
+
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+
+    .product-card img {
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .thumbnail {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .thumbnail.active {
+        border-color: #000 !important;
+    }
+
+    /* Add-to-cart loader (PDP) */
+    [data-add-to-cart] [data-add-to-cart-loading] {
+        display: none;
+    }
+    [data-add-to-cart][data-loading="true"] [data-add-to-cart-default] {
+        display: none;
+    }
+    [data-add-to-cart][data-loading="true"] [data-add-to-cart-loading] {
+        display: inline-flex;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: var(--primary-foreground);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        padding: 0.875rem 2rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--foreground);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        padding: 0.875rem 2rem;
+        border: 2px solid var(--border-strong);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+        background: var(--surface-hover);
+        color: var(--foreground);
+    }
+
+    .section-padding {
+        padding: 4rem 0;
+    }
+
+    .text-heading {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+    }
+
+    .text-subheading {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        opacity: 0.8;
+    }
+
+    #searchSuggestions, #mobileSearchSuggestions {
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) var(--background);
+    }
+
+    #searchSuggestions::-webkit-scrollbar, #mobileSearchSuggestions::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    #searchSuggestions::-webkit-scrollbar-track, #mobileSearchSuggestions::-webkit-scrollbar-track {
+        background: var(--background);
+    }
+
+    #searchSuggestions::-webkit-scrollbar-thumb, #mobileSearchSuggestions::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 2px;
+    }
+
+    #searchSuggestions::-webkit-scrollbar-thumb:hover, #mobileSearchSuggestions::-webkit-scrollbar-thumb:hover {
+        background: var(--border-strong);
+    }
+
+    @media (max-width: 768px) {
+        .text-heading {
+            font-size: 2.5rem;
+        }
+        
+        .text-subheading {
+            font-size: 1.25rem;
+        }
+    }
+
+    /* Prevent iOS autofocus zoom on input fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="url"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+
+    @media screen and (min-width: 768px) {
+        /* Allow smaller font sizes on desktop */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="password"],
+        input[type="search"],
+        input[type="url"],
+        input[type="date"],
+        input[type="time"],
+        input[type="datetime-local"],
+        textarea,
+        select {
+            font-size: inherit;
+        }
+    }
+  </style>
+  <link href="css/default" rel="stylesheet"/>
+  <script>
+   window.__XPRESS_SITE_DATA = {
+                    siteId: "697dbc21b8eab2d421762180",
+                    site: {"_id":"697dbc21b8eab2d421762180","site":{"type":"site","contents":[{"type":"page","slug":"home","contents":[],"meta":{"title":"Home"}},{"type":"page","slug":"category-1","contents":[],"meta":{"title":"Category 1"}},{"type":"page","slug":"category-2","contents":[],"meta":{"title":"Category 2"}},{"type":"page","slug":"category-3","contents":[],"meta":{"title":"Category 3"}}],"headers":{"contents":{"tagline":"My Site Description","description":"My Site Description","logo":{"imageId":"697f7a84b8eab2d42176259a","originalImageId":"697f392268d3dc431a404de2"},"banner":"","visibleToAllBranches":true},"meta":{}},"meta":{"domains":[{"type":"primary","domain":"gadhub.xpress.site"},{"domain":"www.gadhub.in","type":"custom"}],"primaryColor":"#FFD41D","primaryColorName":"Yellow","templateId":"default","socialMediaUrls":{"instagram":"https://www.instagram.com/gadhub.in?igsh=MWVqMmdvaDFoZHVmOQ%3D%3D&utm_source=qr","whatsapp":"917510936247"},"siteMeta":{"favicon":{"imageId":"6a570a97d63f94d0dc4b8feb","originalImageId":"6a570a828e05e9e0431bb14f"},"metaTitle":"Gadhub-All In One Gadgets Hub"}},"branches":[{"meta":{"title":"Main","address":{},"contact":{},"location":{},"workingHours":[]},"slug":"main"}],"currentWebsite":"","footerLinks":[{"id":"section-1780769945465-12254","title":"Categories","links":[{"id":"link-1780769945465-12255","label":"Premium Cases","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762181","href":"/products?category=category-1","target":"_self"},{"id":"link-1780769945465-12256","label":"Speakers","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762184","href":"/products?category=category-2","target":"_self"},{"id":"link-1780769945465-12257","label":"Car Toys","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762187","href":"/products?category=category-3","target":"_self"},{"id":"link-1780769945465-12258","label":"Gadgets","openInNewTab":false,"categoryId":"697ecba7e8eefc9253b27051","href":"/products?category=gadgets","target":"_self"}]},{"id":"section-1780769945465-12382","title":"Support","links":[{"id":"link-1780769945465-12383","label":"Privacy Policy","openInNewTab":false,"pageId":"prebuilt:privacy-policy","href":"/privacy-policy","target":"_self"},{"id":"link-1780769945465-12384","label":"Terms & Conditions","openInNewTab":false,"pageId":"prebuilt:terms-and-conditions","href":"/terms-and-conditions","target":"_self"},{"id":"link-1780769945465-12385","label":"Refund Policy","openInNewTab":false,"pageId":"prebuilt:refund-policy","href":"/refund-policy","target":"_self"},{"id":"link-1780769945465-12386","label":"Shipping Policy","openInNewTab":false,"pageId":"prebuilt:shipping-policy","href":"/shipping-policy","target":"_self"}],"tags":{"support":true}}],"navBarLinks":[{"id":"link-1780769945465-12159","label":"Home Page","openInNewTab":false,"pageId":"697dbc21b8eab2d42176218e","href":"/","target":"_self"},{"id":"link-1780769945465-12160","label":"Phone Cases","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762181","href":"/products?category=category-1","target":"_self"},{"id":"link-1780769945465-12161","label":"Speakers","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762184","href":"/products?category=category-2","target":"_self"},{"id":"link-1780769945465-12162","label":"DieCast/Car Toys Collection","openInNewTab":false,"categoryId":"697dbc21b8eab2d421762187","href":"/products?category=category-3","target":"_self"}]},"createdBy":"697dbacf29ee531bc69593de","createdByRole":"USER","access":[{"role":"USER","userId":"697dbacf29ee531bc69593de","email":"habeebpalliyattil247@gmail.com"}],"createdAt":"2026-01-31T08:24:01.568Z","ownerName":"","title":"Gadhub","companyName":"Gadhub","slug":"gadhub","meta":{"gstin":"","businessCategory":"other","businessName":"Gadhub","productsAndServices":"gadgets,mobilephone cases,mobile accessories,portable speakers,cute finds"},"status":"Completed","lastStep":1,"siteType":"store","ecommerceEnabled":true,"siteLaunched":true,"redirectToRenderer":true,"createdPlatform":"ios","createdDeviceModel":"iPhone 13 Pro","whatsappWidgetEnabled":true,"isSubscriptionActive":true,"updatedAt":"2026-06-09T01:20:09.407Z","formattedSocialMediaUrls":{"facebook":"","instagram":"https://www.instagram.com/gadhub.in?igsh=MWVqMmdvaDFoZHVmOQ%3D%3D&utm_source=qr","twitter":"","youtube":"","whatsapp":"https://wa.me/917510936247","linkedin":""},"whatsappWidgetUrl":"https://wa.me/917510936247","logoUrl":"https://cdn.xpress.site/697dbc21b8eab2d421762180/697f7a84b8eab2d42176259a"},
+                    baseDomain: "gadhub.in",
+                    envBaseDomain: "xpress.site"
+                };
+                
+                // Track page view immediately on load (before bundle.js)
+                (function() {
+                    if (!window.__XPRESS_SITE_DATA || !window.__XPRESS_SITE_DATA.siteId) return;
+                    
+                    // Store initial page view data for analytics bundle to pick up
+                    window.__XPRESS_INITIAL_PAGE_VIEW = {
+                        pathname: window.location.pathname,
+                        href: window.location.href,
+                        timestamp: Date.now()
+                    };
+                })();
+
+                function getAssetUrl(siteId, imageId) {
+                    const isDefault = String(imageId).startsWith('defl-');
+                    if (isDefault === true) {
+                        siteId = 'default-images';
+                        imageId = imageId.replace('defl-', '');
+                    }
+                    return `https://cdn.xpress.site/${siteId}/${imageId}`;
+                }
+
+                function getReviewImageUrl(path) {
+                    return `https://cdn.xpress.site/${path}`;
+                }
+
+                window.__getAssetUrl = getAssetUrl;
+                window.__getReviewImageUrl = getReviewImageUrl;
+  </script>
+  <script type="application/ld+json">
+   [{"@context":"https://schema.org","@type":"Organization","name":"Gadhub","url":"https://gadhub.in","logo":"https://cdn.xpress.site/697dbc21b8eab2d421762180/697f7a84b8eab2d42176259a"},{"@context":"https://schema.org","@type":"WebSite","name":"Gadhub","url":"https://gadhub.in","publisher":{"@type":"Organization","name":"Gadhub","url":"https://gadhub.in","logo":"https://cdn.xpress.site/697dbc21b8eab2d421762180/697f7a84b8eab2d42176259a"}}]
+  </script>
+  <style>
+   *, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.-right-1{right:-0.25rem}.-top-1{top:-0.25rem}.left-0{left:0px}.left-4{left:1rem}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-1\/2{top:50%}.top-4{top:1rem}.top-full{top:100%}.right-2{right:0.5rem}.right-2\.5{right:0.625rem}.top-2{top:0.5rem}.bottom-20{bottom:5rem}.right-6{right:1.5rem}.bottom-2{bottom:0.5rem}.left-2{left:0.5rem}.z-10{z-index:10}.z-50{z-index:50}.z-\[100\]{z-index:100}.z-\[101\]{z-index:101}.z-\[200\]{z-index:200}.z-\[201\]{z-index:201}.order-2{order:2}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-0{margin-left:0px}.mr-2{margin-right:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-1\.5{margin-top:0.375rem}.mt-2{margin-top:0.5rem}.ml-2{margin-left:0.5rem}.ml-auto{margin-left:auto}.mr-1{margin-right:0.25rem}.mt-10{margin-top:2.5rem}.mt-4{margin-top:1rem}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.mt-auto{margin-top:auto}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.line-clamp-3{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}.line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[3\/4\]{aspect-ratio:3/4}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-\[34px\]{height:34px}.h-\[42px\]{height:42px}.h-full{height:100%}.h-20{height:5rem}.h-\[1\.25rem\]{height:1.25rem}.max-h-60{max-height:15rem}.max-h-80{max-height:20rem}.max-h-full{max-height:100%}.max-h-40{max-height:10rem}.min-h-\[400px\]{min-height:400px}.min-h-\[1\.25rem\]{min-height:1.25rem}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-80{width:20rem}.w-auto{width:auto}.w-full{width:100%}.w-20{width:5rem}.w-12{width:3rem}.min-w-0{min-width:0px}.max-w-\[1600px\]{max-width:1600px}.max-w-\[800px\]{max-width:800px}.max-w-\[85vw\]{max-width:85vw}.max-w-md{max-width:28rem}.max-w-\[10rem\]{max-width:10rem}.max-w-\[11rem\]{max-width:11rem}.max-w-\[200px\]{max-width:200px}.max-w-\[220px\]{max-width:220px}.max-w-\[calc\(100\%-1rem\)\]{max-width:calc(100% - 1rem)}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.-translate-x-full{--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-10{gap:2.5rem}.gap-8{gap:2rem}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-x-6{column-gap:1.5rem}.gap-y-8{row-gap:2rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.break-words{overflow-wrap:break-word}.rounded-\[30px\]{border-radius:30px}.rounded-\[7px\]{border-radius:7px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded{border-radius:0.25rem}.rounded-\[8px\]{border-radius:8px}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-\[\#c0c0c0\]{--tw-border-opacity:1;border-color:rgb(192 192 192 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-t-black{--tw-border-opacity:1;border-top-color:rgb(0 0 0 / var(--tw-border-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-black\/65{background-color:rgb(0 0 0 / 0.65)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-pink-500{--tw-gradient-to:rgb(236 72 153 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #ec4899 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-orange-500{--tw-gradient-to:#f97316 var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.pb-0{padding-bottom:0px}.pb-4{padding-bottom:1rem}.pb-5{padding-bottom:1.25rem}.pl-10{padding-left:2.5rem}.pl-11{padding-left:2.75rem}.pr-14{padding-right:3.5rem}.pr-4{padding-right:1rem}.pt-4{padding-top:1rem}.pt-5{padding-top:1.25rem}.pb-24{padding-bottom:6rem}.pb-8{padding-bottom:2rem}.pl-0{padding-left:0px}.pl-2\.5{padding-left:0.625rem}.pr-7{padding-right:1.75rem}.pt-10{padding-top:2.5rem}.pt-6{padding-top:1.5rem}.pb-10{padding-bottom:2.5rem}.pl-4{padding-left:1rem}.pt-12{padding-top:3rem}.pb-3{padding-bottom:0.75rem}.pl-2{padding-left:0.5rem}.pr-3{padding-right:0.75rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-\[13px\]{font-size:13px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[12px\]{font-size:12px}.text-\[14px\]{font-size:14px}.text-\[15px\]{font-size:15px}.text-\[24px\]{font-size:24px}.text-\[11px\]{font-size:11px}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[12\.5px\]{font-size:12.5px}.text-\[9px\]{font-size:9px}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.capitalize{text-transform:capitalize}.leading-relaxed{line-height:1.625}.leading-\[1\.25rem\]{line-height:1.25rem}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:0.025em}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-\[\#DEAA1B\]{--tw-text-opacity:1;color:rgb(222 170 27 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.line-through{-webkit-text-decoration-line:line-through;text-decoration-line:line-through}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:opacity-80:hover{opacity:0.8}.focus\:border-transparent:focus{border-color:transparent}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-0:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-black:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0 / var(--tw-ring-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media not all and (min-width: 640px){.max-sm\:hidden{display:none}.max-sm\:max-h-80{max-height:20rem}.max-sm\:justify-end{justify-content:flex-end}.max-sm\:border-0{border-width:0px}.max-sm\:border-b-0{border-bottom-width:0px}}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:max-w-\[12rem\]{max-width:12rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:justify-center{justify-content:center}.sm\:gap-x-8{column-gap:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-2{padding-top:0.5rem;padding-bottom:0.5rem}.sm\:pt-12{padding-top:3rem}.sm\:text-\[14px\]{font-size:14px}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[15px\]{font-size:15px}}@media (min-width: 768px){.md\:my-0{margin-top:0px;margin-bottom:0px}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-14{height:3.5rem}.md\:min-h-\[280px\]{min-height:280px}.md\:max-w-\[400px\]{max-width:400px}.md\:max-w-\[500px\]{max-width:500px}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:justify-center{justify-content:center}.md\:gap-10{gap:2.5rem}.md\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.md\:border-l-0{border-left-width:0px}.md\:border-r{border-right-width:1px}.md\:py-2{padding-top:0.5rem;padding-bottom:0.5rem}.md\:py-4{padding-top:1rem;padding-bottom:1rem}.md\:px-10{padding-left:2.5rem;padding-right:2.5rem}.md\:px-2{padding-left:0.5rem;padding-right:0.5rem}.md\:pt-12{padding-top:3rem}.md\:pb-14{padding-bottom:3.5rem}.md\:pl-10{padding-left:2.5rem}.md\:pl-4{padding-left:1rem}.md\:pr-8{padding-right:2rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:bottom-6{bottom:1.5rem}.lg\:order-1{order:1}.lg\:order-last{order:9999}.lg\:mb-6{margin-bottom:1.5rem}.lg\:mt-12{margin-top:3rem}.lg\:mb-0{margin-bottom:0px}.lg\:mt-0{margin-top:0px}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:h-16{height:4rem}.lg\:max-h-96{max-height:24rem}.lg\:min-h-\[320px\]{min-height:320px}.lg\:w-72{width:18rem}.lg\:w-16{width:4rem}.lg\:w-auto{width:auto}.lg\:min-w-0{min-width:0px}.lg\:max-w-\[680px\]{max-width:680px}.lg\:max-w-\[13rem\]{max-width:13rem}.lg\:flex-1{flex:1 1 0%}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:flex-wrap{flex-wrap:wrap}.lg\:items-start{align-items:flex-start}.lg\:justify-start{justify-content:flex-start}.lg\:justify-between{justify-content:space-between}.lg\:gap-10{gap:2.5rem}.lg\:gap-12{gap:3rem}.lg\:gap-x-10{column-gap:2.5rem}.lg\:gap-y-8{row-gap:2rem}.lg\:border-l{border-left-width:1px}.lg\:px-12{padding-left:3rem;padding-right:3rem}.lg\:py-\[17px\]{padding-top:17px;padding-bottom:17px}.lg\:px-0{padding-left:0px;padding-right:0px}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pb-12{padding-bottom:3rem}.lg\:pl-6{padding-left:1.5rem}.lg\:pt-16{padding-top:4rem}.lg\:pl-8{padding-left:2rem}.lg\:pb-\[13px\]{padding-bottom:13px}.lg\:pl-2{padding-left:0.5rem}.lg\:pr-\[25px\]{padding-right:25px}.lg\:pt-4{padding-top:1rem}.lg\:text-\[13px\]{font-size:13px}.lg\:text-\[20px\]{font-size:20px}.lg\:text-\[43px\]{font-size:43px}.lg\:text-\[16px\]{font-size:16px}.lg\:text-\[10px\]{font-size:10px}.lg\:text-\[11px\]{font-size:11px}.lg\:text-\[14px\]{font-size:14px}}@media (min-width: 1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.xl\:gap-12{gap:3rem}.xl\:text-\[50px\]{font-size:50px}}
+  </style>
+ </head>
+ <body>
+  <!-- Demo Store Banner -->
+  <!-- Navigation -->
+  <header class="sticky top-0 w-full z-50 bg-surface border-b" data-hero-section="" style="border-color: #E5E5E5;">
+   <div class="max-w-[1600px] mx-auto bg-surface sm:px-6 lg:px-12 pt-5 pb-0 md:py-4">
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex items-center justify-between mt-2 mb-6 md:my-0">
+     <!-- Left side - Logo and Menu Button -->
+     <div class="flex items-center gap-3">
+      <!-- Menu Button for Medium Screens -->
+      <button aria-label="Toggle menu" class="md:flex lg:hidden p-1 text-muted hover:text-foreground" id="desktopMenuToggle">
+       <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 17.658 13.045" width="24" xmlns="http://www.w3.org/2000/svg">
+        <g id="menu-svgrepo-com" transform="translate(-5.25 -7.75)">
+         <path d="M6,12H22.158" data-name="Path 28005" id="Path_28005" transform="translate(0 2.272)">
+         </path>
+         <path d="M6,15.5H22.158" data-name="Path 28006" id="Path_28006" transform="translate(0 4.545)">
+         </path>
+         <path d="M6,8.5H22.158" data-name="Path 28007" id="Path_28007">
+         </path>
+        </g>
+       </svg>
+      </button>
+      <a class="cursor-pointer" href="/">
+       <div class="h-16 bg-background flex items-center justify-start overflow-hidden">
+        <img alt="Company Logo" class="w-auto max-h-full h-10" src="images/697f7a84b8eab2d42176259a"/>
+       </div>
+      </a>
+     </div>
+     <!-- Center - Search Bar with Track Order -->
+     <div class="flex-1 max-w-[800px] mx-6">
+      <div class="flex items-center gap-3">
+       <div class="flex-1 relative">
+        <form class="relative" onsubmit="event.preventDefault(); return false;">
+         <div class="relative">
+          <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2" style="color: #4b5563; width: 13px; height: 13px; font-size: 13px;">
+          </i>
+          <input class="w-full pl-10 pr-4 py-3 text-[13px] text-foreground placeholder-muted-foreground rounded-[7px] focus:outline-none focus:bg-surface transition-all duration-200" data-analytics-event="search_input" data-analytics-from="header" data-search-input="" id="searchInput" onkeydown="if(event.key === 'Enter') { event.preventDefault(); return false; }" placeholder="Search products..." style="font-size: 13px !important; font-family: var(--font-ibm-plex-sans-base); font-weight: normal; background-color: #F7F7F7;" type="text"/>
+         </div>
+         <!-- Search Suggestions Dropdown -->
+         <div class="hidden absolute top-full left-0 right-0 mt-1 bg-surface border border-border rounded-lg shadow-lg z-50 max-h-80 lg:max-h-96 overflow-y-auto" data-search-results="" id="searchSuggestions" style="z-index: 1000;">
+          <!-- Loading State for Desktop -->
+          <div class="hidden absolute inset-0 flex items-center justify-center bg-surface rounded-lg z-10 md:min-h-[280px] lg:min-h-[320px]" data-search-loading="">
+           <div class="text-center">
+            <div class="inline-block animate-spin rounded-full h-6 w-6 border-3 border-gray-300 border-t-black mb-2">
+            </div>
+            <p class="text-xs text-muted">
+             Searching...
+            </p>
+           </div>
+          </div>
+          <!-- Suggestions will be populated here -->
+         </div>
+        </form>
+       </div>
+       <!-- Track Order Button -->
+       <button class="inline-flex h-[42px] items-center gap-2 rounded-[7px] border border-border bg-surface px-4 text-[13px] font-ibm-plex-sans font-normal text-foreground transition-colors hover:bg-surface-hover cursor-pointer whitespace-nowrap track-order-open-button" data-analytics-event="track_order_click" data-analytics-from="header" data-track-order-open="" id="xp-track-order-open-1">
+        <svg class="w-4 h-4" height="16" style="fill: currentColor;" viewbox="0 0 15 18" width="16" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12.285,18.993c-.128.094-.247.179-.357.256-.116-.077-.245-.166-.385-.266a18.008,18.008,0,0,1-2.359-2.03C7.454,15.179,6,12.915,6,10.5a6,6,0,0,1,12,0c0,2.389-1.518,4.647-3.311,6.439A21.041,21.041,0,0,1,12.285,18.993ZM19.5,10.5C19.5,16.5,12,21,12,21c-.375,0-7.5-4.5-7.5-10.5a7.5,7.5,0,0,1,15,0Zm-6,0A1.5,1.5,0,1,1,12,9,1.5,1.5,0,0,1,13.5,10.5Zm1.5,0a3,3,0,1,1-3-3A3,3,0,0,1,15,10.5Z" fill-rule="evenodd" transform="translate(-4.5 -3)">
+         </path>
+        </svg>
+        <span class="hidden sm:inline font-ibm-plex-sans font-normal">
+         Track Order
+        </span>
+       </button>
+      </div>
+     </div>
+     <!-- Right side - Actions -->
+     <div class="flex items-center space-x-4">
+      <!-- Call Button -->
+      <!-- <a href="tel:+1234567890" class="inline-flex h-11 items-center gap-2 rounded-[7px] bg-primary px-5 text-[15px] font-ibm-plex-sans font-medium text-white shadow-sm transition-colors hover:bg-green-700 cursor-pointer">
+                    <i class="fas fa-phone w-4 h-4 text-white"></i>
+                    <span class="font-ibm-plex-sans font-medium text-white">Call</span>
+                </a> -->
+      <!-- Cart -->
+      <a class="relative p-2 text-muted hover:text-foreground cursor-pointer" data-analytics-event="cart_click" data-analytics-from="header" href="/cart">
+       <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 19.5 22.071" width="24" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-4.25 -3.25)">
+         <path d="M5,7H23V19.857a3.857,3.857,0,0,1-3.857,3.857H8.857A3.857,3.857,0,0,1,5,19.857Z" transform="translate(0 0.857)">
+         </path>
+         <path d="M9,10v1.286a3.857,3.857,0,0,0,3.857,3.857h0a3.857,3.857,0,0,0,3.857-3.857V10" transform="translate(1.143 1.714)">
+         </path>
+         <path d="M7.571,4H20.429L23,7.857H5Z">
+         </path>
+        </g>
+       </svg>
+       <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-ibm-plex-sans font-medium hidden" data-cart-count="">
+        0
+       </span>
+      </a>
+     </div>
+    </div>
+    <!-- Mobile Layout -->
+    <div class="md:hidden px-4 pb-5">
+     <!-- Mobile Top Row -->
+     <div class="flex items-center justify-between mt-2 mb-6">
+      <button aria-label="Toggle mobile menu" class="p-1 text-muted hover:text-foreground" id="mobileMenuToggle">
+       <svg class="w-5 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 17.658 13.045" width="24" xmlns="http://www.w3.org/2000/svg">
+        <g id="menu-svgrepo-com" transform="translate(-5.25 -7.75)">
+         <path d="M6,12H22.158" data-name="Path 28005" id="Path_28005" transform="translate(0 2.272)">
+         </path>
+         <path d="M6,15.5H22.158" data-name="Path 28006" id="Path_28006" transform="translate(0 4.545)">
+         </path>
+         <path d="M6,8.5H22.158" data-name="Path 28007" id="Path_28007">
+         </path>
+        </g>
+       </svg>
+      </button>
+      <!-- Mobile Logo -->
+      <a class="cursor-pointer" href="/">
+       <div class="h-14 bg-background flex items-center justify-start overflow-hidden">
+        <img alt="Company Logo" class="w-auto max-h-full h-[34px]" src="images/697f7a84b8eab2d42176259a"/>
+       </div>
+      </a>
+      <div class="flex items-center space-x-3">
+       <a class="relative p-2 text-muted hover:text-foreground cursor-pointer" data-analytics-event="cart_click" data-analytics-from="header" href="/cart">
+        <svg class="w-5 h-5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 19.5 22.071" width="24" xmlns="http://www.w3.org/2000/svg">
+         <g transform="translate(-4.25 -3.25)">
+          <path d="M5,7H23V19.857a3.857,3.857,0,0,1-3.857,3.857H8.857A3.857,3.857,0,0,1,5,19.857Z" transform="translate(0 0.857)">
+          </path>
+          <path d="M9,10v1.286a3.857,3.857,0,0,0,3.857,3.857h0a3.857,3.857,0,0,0,3.857-3.857V10" transform="translate(1.143 1.714)">
+          </path>
+          <path d="M7.571,4H20.429L23,7.857H5Z">
+          </path>
+         </g>
+        </svg>
+        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-ibm-plex-sans font-medium hidden" data-cart-count="">
+         0
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Search Bar -->
+     <div class="relative" style="overflow: visible;">
+      <div class="relative">
+       <form class="relative" onsubmit="event.preventDefault(); return false;">
+        <div class="relative">
+         <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2" style="color: #4b5563; width: 13px; height: 13px; font-size: 13px;">
+         </i>
+         <input class="w-full pl-10 pr-4 py-3 text-[13px] text-foreground placeholder-muted-foreground border max-sm:border-0 rounded-[7px] transition-all duration-200" data-search-input="" id="mobileSearchInput" onkeydown="if(event.key === 'Enter') { event.preventDefault(); return false; }" placeholder="Search products..." style="font-size: 13px !important; font-family: var(--font-ibm-plex-sans-base); font-weight: normal; background-color: #F7F7F7; border-color: #E2E2E2;" type="text"/>
+        </div>
+       </form>
+      </div>
+      <!-- Search Suggestions - Mobile -->
+      <div class="hidden absolute top-full left-0 right-0 mt-1 bg-surface border border-border rounded-lg shadow-lg z-50 max-h-60 max-sm:max-h-80 overflow-y-auto" data-search-results="" id="mobileSearchSuggestions" style="z-index: 1000;">
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- TabHeader Navigation -->
+   <div class="w-full border-t" style="border-color: #E5E5E5;">
+    <div class="hidden lg:block" style="overflow: visible;">
+     <div class="max-w-[1600px] mx-auto">
+      <div class="flex items-center justify-start sm:justify-center space-x-6 md:space-x-8 h-12 md:h-14" style="overflow: visible;">
+       <a class="nav-link relative font-ibm-plex-sans font-normal transition-colors py-3.5 sm:py-2 md:py-2 lg:py-[17px] whitespace-nowrap capitalize ml-0" data-nav-url="/" href="/" style="color: #343434; font-size: 15px; letter-spacing: -0.01em;">
+        Home Page
+       </a>
+       <a class="nav-link relative font-ibm-plex-sans font-normal transition-colors py-3.5 sm:py-2 md:py-2 lg:py-[17px] whitespace-nowrap capitalize" data-nav-url="/products?category=category-1" href="/products?category=category-1" style="color: #343434; font-size: 15px; letter-spacing: -0.01em;">
+        Phone Cases
+       </a>
+       <a class="nav-link relative font-ibm-plex-sans transition-colors py-3.5 sm:py-2 md:py-2 lg:py-[17px] whitespace-nowrap capitalize active-nav-link font-medium" data-nav-url="/products?category=category-2" href="/products?category=category-2" style="color: #343434; font-size: 15px; letter-spacing: -0.01em;">
+        Speakers
+        <span class="bg-primary" style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 2px; z-index: 10;">
+        </span>
+       </a>
+       <a class="nav-link relative font-ibm-plex-sans font-normal transition-colors py-3.5 sm:py-2 md:py-2 lg:py-[17px] whitespace-nowrap capitalize" data-nav-url="/products?category=category-3" href="/products?category=category-3" style="color: #343434; font-size: 15px; letter-spacing: -0.01em;">
+        DieCast/Car Toys Collection
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+  <!-- Mobile Sidebar Overlay -->
+  <div class="hidden lg:hidden fixed inset-0 bg-black/50 z-[100] transition-opacity duration-300" id="mobileMenuBackdrop">
+  </div>
+  <!-- Mobile Sidebar -->
+  <div class="hidden lg:hidden fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-surface border-r border-border z-[101] transform transition-transform duration-300 ease-in-out -translate-x-full" id="mobileMenu">
+   <div class="flex flex-col h-full">
+    <!-- Sidebar Header -->
+    <div class="flex items-center justify-between p-4 border-b border-border max-sm:border-b-0 flex-shrink-0 max-sm:justify-end">
+     <h2 class="text-lg font-ibm-plex-sans font-semibold text-foreground max-sm:hidden">
+      Menu
+     </h2>
+     <button aria-label="Close menu" class="p-2 text-muted hover:text-foreground" id="closeMobileMenu">
+      <svg class="w-7 h-7" fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+       <path d="M6 6l12 12M18 6L6 18">
+       </path>
+      </svg>
+     </button>
+    </div>
+    <!-- Drawer Content -->
+    <div class="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+     <a class="nav-link block text-sm font-ibm-plex-sans font-normal text-muted transition-colors tracking-wide py-2 capitalize" data-nav-url="/" href="/">
+      Home Page
+     </a>
+     <a class="nav-link block text-sm font-ibm-plex-sans font-normal text-muted transition-colors tracking-wide py-2 capitalize" data-nav-url="/products?category=category-1" href="/products?category=category-1">
+      Phone Cases
+     </a>
+     <a class="nav-link block text-sm font-ibm-plex-sans text-muted transition-colors tracking-wide py-2 capitalize active-nav-link font-medium" data-nav-url="/products?category=category-2" href="/products?category=category-2">
+      Speakers
+      <span class="bg-primary" style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 2px; z-index: 10;">
+      </span>
+     </a>
+     <a class="nav-link block text-sm font-ibm-plex-sans font-normal text-muted transition-colors tracking-wide py-2 capitalize" data-nav-url="/products?category=category-3" href="/products?category=category-3">
+      DieCast/Car Toys Collection
+     </a>
+    </div>
+    <!-- Action Buttons Section - Fixed at Bottom -->
+    <div class="px-4 py-4 space-y-3 border-t border-border flex-shrink-0 bg-surface">
+     <button class="w-full inline-flex h-12 items-center justify-center gap-3 rounded-[30px] border border-border bg-surface px-4 text-[13px] font-ibm-plex-sans font-normal text-foreground transition-colors hover:bg-surface-hover cursor-pointer track-order-open-button" data-analytics-event="track_order_click" data-analytics-from="header" data-track-order-open="" id="xp-track-order-open-2">
+      <svg class="w-5 h-5" height="20" style="fill: currentColor;" viewbox="0 0 15 18" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12.285,18.993c-.128.094-.247.179-.357.256-.116-.077-.245-.166-.385-.266a18.008,18.008,0,0,1-2.359-2.03C7.454,15.179,6,12.915,6,10.5a6,6,0,0,1,12,0c0,2.389-1.518,4.647-3.311,6.439A21.041,21.041,0,0,1,12.285,18.993ZM19.5,10.5C19.5,16.5,12,21,12,21c-.375,0-7.5-4.5-7.5-10.5a7.5,7.5,0,0,1,15,0Zm-6,0A1.5,1.5,0,1,1,12,9,1.5,1.5,0,0,1,13.5,10.5Zm1.5,0a3,3,0,1,1-3-3A3,3,0,0,1,15,10.5Z" fill-rule="evenodd" transform="translate(-4.5 -3)">
+       </path>
+      </svg>
+      <span class="font-ibm-plex-sans font-normal">
+       Track Order
+      </span>
+     </button>
+     <!-- <a href="tel:+1234567890" class="w-full inline-flex h-12 items-center justify-center gap-3 rounded-[30px] bg-green-600 px-4 text-[14px] font-ibm-plex-sans font-medium text-white shadow-sm transition-colors hover:bg-green-700 cursor-pointer">
+                <i class="fas fa-phone w-5 h-5 text-white"></i>
+                <span class="font-ibm-plex-sans font-medium text-white">Call Us</span>
+            </a> -->
+    </div>
+   </div>
+  </div>
+  <!-- Full Screen Mobile Search (Legacy - kept for compatibility) -->
+  <div class="hidden md:hidden fixed inset-0 bg-background z-50 flex flex-col" id="mobileSearch">
+   <!-- Search Header -->
+   <div class="flex items-center gap-4 px-4 py-4 border-b border-border">
+    <button aria-label="Close search" class="text-foreground hover:text-muted transition" id="closeMobileSearch">
+     <i class="fas fa-arrow-left text-xl">
+     </i>
+    </button>
+    <div class="flex-1 relative">
+     <input class="w-full pl-10 pr-4 py-3 bg-ai-input-bg border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-black text-base transition-all text-foreground placeholder-muted" data-search-input="" id="mobileSearchInputFull" onkeydown="if(event.key === 'Enter') { event.preventDefault(); return false; }" placeholder="Search products..." type="text"/>
+     <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-muted">
+     </i>
+    </div>
+   </div>
+   <!-- Search Results - Takes full remaining space -->
+   <div class="flex-1 overflow-y-auto relative">
+    <!-- Loading State -->
+    <div class="hidden absolute inset-0 flex items-center justify-center" id="mobileSearchLoading">
+     <div class="text-center">
+      <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-border-strong border-t-black mb-3">
+      </div>
+      <p class="text-sm text-muted">
+       Searching...
+      </p>
+     </div>
+    </div>
+    <!-- Search Results Container -->
+    <div class="w-full" data-search-results="" id="mobileSearchSuggestionsFull">
+     <!-- Mobile search results will be populated here -->
+    </div>
+   </div>
+  </div>
+  <!-- Search Templates -->
+  <template id="searchResultTemplate">
+   <a class="block hover:bg-surface-hover transition-colors" data-search-result-link="" href="#">
+    <div class="p-4 flex items-center space-x-4 border-b border-border last:border-b-0">
+     <div class="w-16 h-16 bg-surface-hover rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
+      <img alt="" class="w-full h-full object-cover hidden" data-search-result-image="" loading="lazy" src=""/>
+      <!-- <i data-search-result-icon class="fas fa-box text-xl text-gray-400"></i> -->
+     </div>
+     <div class="flex-1 min-w-0">
+      <h4 class="font-ibm-plex-sans font-normal text-foreground truncate text-sm" data-search-result-name="">
+      </h4>
+     </div>
+     <div class="text-right flex-shrink-0">
+      <div class="font-inter font-medium text-foreground text-xs" data-search-result-price="">
+      </div>
+      <div class="text-xs text-muted line-through hidden" data-search-result-original-price="">
+      </div>
+     </div>
+    </div>
+   </a>
+  </template>
+  <template id="searchEmptyTemplate">
+   <div class="p-8 text-center text-muted">
+    <i class="fas fa-search text-3xl mb-3 opacity-50">
+    </i>
+    <p class="text-sm font-inter font-medium" data-search-empty-message="">
+     No products found
+    </p>
+   </div>
+  </template>
+  <template id="searchViewAllTemplate">
+   <div class="p-4 bg-surface-hover border-t border-border sticky bottom-0 z-10 mt-4">
+    <a class="block text-center text-foreground hover:text-muted font-ibm-plex-sans font-normal text-xs uppercase tracking-wide transition-colors" data-search-view-all-link="" href="#">
+     View All Results
+     <i class="fas fa-arrow-right ml-2 text-xs">
+     </i>
+    </a>
+   </div>
+  </template>
+  <!-- Track Order Modal Backdrop -->
+  <div class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[200] transition-opacity duration-300" id="trackOrderBackdrop">
+  </div>
+  <!-- Track Order Modal -->
+  <div class="hidden fixed inset-0 z-[201] flex items-center justify-center p-4" data-site-id="697dbc21b8eab2d421762180" id="trackOrderModal">
+   <div class="bg-modal-bg rounded-lg shadow-xl w-full max-w-md relative border border-border">
+    <!-- Modal Header -->
+    <div class="flex items-center bg-surface p-6 pb-4 pr-14 border-b border-checkout-border">
+     <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+       <i class="fas fa-box text-primary text-lg">
+       </i>
+      </div>
+      <div>
+       <h2 class="text-xl font-semibold font-ibm-plex-sans text-foreground">
+        Track Order
+       </h2>
+       <p class="text-sm text-muted font-ibm-plex-sans font-normal mt-0.5">
+        Enter your order details
+       </p>
+      </div>
+     </div>
+     <button aria-label="Close modal" class="absolute top-4 right-4 p-2.5 text-muted hover:text-foreground transition-colors z-10" data-track-order-close="">
+      <i class="fas fa-times w-6 h-6">
+      </i>
+     </button>
+    </div>
+    <!-- Modal Body -->
+    <form class="p-6 bg-surface" data-track-order-form="">
+     <!-- Error Message -->
+     <div class="hidden mb-4 p-3 bg-red-50 border border-red-200 rounded-lg" id="trackOrderError">
+      <p class="text-red-600 text-sm font-ibm-plex-sans font-normal">
+      </p>
+     </div>
+     <!-- Order ID Input -->
+     <div class="mb-6">
+      <label class="block text-sm font-semibold font-ibm-plex-sans text-foreground mb-2" for="trackOrderId">
+       Order ID
+      </label>
+      <input class="w-full px-4 py-3 bg-ai-input-bg border border-border rounded-lg text-sm font-ibm-plex-sans font-normal text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all border-gray-200" data-track-order-id="" id="trackOrderId" placeholder="Enter your order ID" type="text"/>
+      <p class="text-xs text-muted font-ibm-plex-sans font-normal mt-1.5">
+       You can find this in your order confirmation email
+      </p>
+     </div>
+     <!-- Toggle between Email and Phone -->
+     <div class="mb-4">
+      <div class="flex items-center gap-4 border border-border rounded-lg p-1 bg-surface-hover">
+       <button class="flex-1 px-4 py-2 text-sm font-ibm-plex-sans font-medium rounded-md transition-all data-active:bg-primary data-active:text-white data-inactive:text-foreground data-inactive:hover:bg-surface" data-active="true" data-track-order-toggle="email" type="button">
+        <i class="fas fa-envelope mr-2">
+        </i>
+        Email
+       </button>
+       <button class="flex-1 px-4 py-2 text-sm font-ibm-plex-sans font-medium rounded-md transition-all data-active:bg-primary data-active:text-white data-inactive:text-foreground data-inactive:hover:bg-surface" data-inactive="true" data-track-order-toggle="phone" type="button">
+        <i class="fas fa-phone mr-2">
+        </i>
+        Phone
+       </button>
+      </div>
+     </div>
+     <!-- Email Address Input -->
+     <div class="mb-6" data-track-order-email-section="">
+      <label class="block text-sm font-semibold font-ibm-plex-sans text-foreground mb-2" for="trackOrderEmail">
+       Email Address
+      </label>
+      <div class="relative">
+       <i class="fas fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2 text-muted w-4 h-4">
+       </i>
+       <input class="w-full pl-11 pr-4 py-3 bg-ai-input-bg border border-border rounded-lg text-sm font-ibm-plex-sans font-normal text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all border-gray-200" data-track-order-email="" id="trackOrderEmail" placeholder="Enter your email address" type="email"/>
+      </div>
+      <p class="text-xs text-muted font-ibm-plex-sans font-normal mt-1.5">
+       The email address used when placing the order
+      </p>
+     </div>
+     <!-- Phone Number Input -->
+     <div class="mb-6 hidden" data-track-order-phone-section="">
+      <label class="block text-sm font-semibold font-ibm-plex-sans text-foreground mb-2" for="trackOrderPhone">
+       Phone Number
+      </label>
+      <div class="relative">
+       <i class="fas fa-phone absolute left-4 top-1/2 transform -translate-y-1/2 text-muted w-4 h-4">
+       </i>
+       <input class="w-full pl-11 pr-4 py-3 bg-ai-input-bg border border-border rounded-lg text-sm font-ibm-plex-sans font-normal text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all border-gray-200" data-track-order-phone="" id="trackOrderPhone" placeholder="Enter 10-digit phone number" type="tel"/>
+      </div>
+      <p class="text-xs text-muted font-ibm-plex-sans font-normal mt-1.5">
+       Enter your 10-digit phone number
+      </p>
+     </div>
+     <!-- Modal Footer -->
+     <div class="flex items-center justify-end gap-3 pt-4 border-t border-border">
+      <button class="px-6 py-2.5 rounded-lg border border-border bg-surface text-foreground text-sm font-ibm-plex-sans font-normal hover:bg-surface-hover transition-colors" data-track-order-cancel="" type="button">
+       Cancel
+      </button>
+      <button class="px-6 py-2.5 rounded-lg bg-primary text-white text-sm font-ibm-plex-sans font-semibold hover:bg-primary/20 transition-colors track-order-submit-button" data-track-order-submit="" id="xp-track-order-submit-1" type="submit">
+       Track Order
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+  <script>
+   // Ensure fixed header doesn't overlap page content
+    (function() {
+        const header = document.querySelector('header[data-hero-section]');
+        if (!header) return;
+
+        const setHeaderOffset = () => {
+            const height = Math.ceil(header.getBoundingClientRect().height);
+            document.documentElement.style.setProperty('--site-header-offset', `${height}px`);
+        };
+
+        setHeaderOffset();
+        window.addEventListener('resize', setHeaderOffset);
+        window.addEventListener('load', setHeaderOffset);
+    })();
+
+    // Mobile Search Toggle
+    (function() {
+        const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+        const mobileSearch = document.getElementById('mobileSearch');
+        const closeMobileSearch = document.getElementById('closeMobileSearch');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+        
+        // Prevent body scroll when mobile search or menu is open
+        function preventBodyScroll() {
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function allowBodyScroll() {
+            document.body.style.overflow = '';
+        }
+        
+        // Make these functions globally accessible
+        window.preventBodyScroll = preventBodyScroll;
+        window.allowBodyScroll = allowBodyScroll;
+        
+        // Open mobile search
+        function openMobileSearch() {
+            if (mobileSearch) {
+                mobileSearch.classList.remove('hidden');
+                preventBodyScroll();
+                // Focus on search input
+                const searchInput = document.getElementById('mobileSearchInput');
+                if (searchInput) {
+                    setTimeout(() => searchInput.focus(), 100);
+                }
+            }
+            // Close mobile menu if open
+            closeMobileMenuDrawer();
+        }
+        
+        // Close mobile search
+        function closeMobileSearchDrawer() {
+            if (mobileSearch) {
+                mobileSearch.classList.add('hidden');
+                allowBodyScroll();
+            }
+        }
+        
+        // Open mobile menu drawer
+        function openMobileMenuDrawer() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('-translate-x-full');
+                }, 10);
+                if (mobileMenuBackdrop) {
+                    mobileMenuBackdrop.classList.remove('hidden');
+                }
+                preventBodyScroll();
+            }
+            // Close mobile search if open
+            closeMobileSearchDrawer();
+        }
+        
+        // Close mobile menu drawer
+        function closeMobileMenuDrawer() {
+            if (mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                if (mobileMenuBackdrop) {
+                    mobileMenuBackdrop.classList.add('hidden');
+                }
+                allowBodyScroll();
+            }
+        }
+        
+        // Mobile Search Toggle Button
+        if (mobileSearchToggle) {
+            mobileSearchToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openMobileSearch();
+            });
+        }
+        
+        // Close Mobile Search Button
+        if (closeMobileSearch) {
+            closeMobileSearch.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeMobileSearchDrawer();
+            });
+        }
+        
+        // Mobile Menu Toggle Button
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openMobileMenuDrawer();
+            });
+        }
+        
+        // Desktop Menu Toggle Button (for medium screens)
+        const desktopMenuToggle = document.getElementById('desktopMenuToggle');
+        if (desktopMenuToggle) {
+            desktopMenuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openMobileMenuDrawer();
+            });
+        }
+        
+        // Close Mobile Menu Button
+        if (closeMobileMenu) {
+            closeMobileMenu.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeMobileMenuDrawer();
+            });
+        }
+        
+        // Close menu when clicking backdrop
+        if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.addEventListener('click', function() {
+                closeMobileMenuDrawer();
+            });
+        }
+        
+        // Close mobile menu when clicking a link
+        if (mobileMenu) {
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenuDrawer();
+                });
+            });
+        }
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (mobileSearch && !mobileSearch.classList.contains('hidden')) {
+                    closeMobileSearchDrawer();
+                }
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenuDrawer();
+                }
+            }
+        });
+        
+        // Active Navigation Link Highlighting
+        function updateActiveNavLink() {
+            const currentPath = window.location.pathname;
+            const currentSearch = window.location.search;
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                // Skip the "More" button itself - it's not a navigation link (dropdown links should still be processed)
+                if (link.id === 'moreTabsButton') {
+                    return;
+                }
+                
+                const url = link.getAttribute('data-nav-url') || '';
+                const href = link.getAttribute('href') || '';
+                const existingIndicator = link.querySelector('.bg-primary');
+                
+                // Remove existing indicator
+                if (existingIndicator) {
+                    existingIndicator.remove();
+                }
+                link.classList.remove('active-nav-link');
+                
+                // Check if this link is active
+                let isActive = false;
+                
+                // Extract category from href if it exists
+                const hrefHasCategory = href.includes('category=');
+                const hrefCategory = hrefHasCategory ? new URLSearchParams(href.split('?')[1] || '').get('category') : null;
+                const currentCategory = currentSearch.includes('category=') ? new URLSearchParams(currentSearch).get('category') : null;
+                
+                // Exact match for home page
+                if (url === '/' && currentPath === '/' && !currentSearch) {
+                    isActive = true;
+                }
+                // Special handling for product category links - must match exact category
+                else if (hrefHasCategory && currentCategory) {
+                    if (hrefCategory === currentCategory && currentPath.startsWith('/products')) {
+                        isActive = true;
+                    }
+                }
+                // For non-category links, check exact path match (like /more)
+                else if (!hrefHasCategory && url !== '/' && url !== '#') {
+                    // Check if path matches exactly (not just starts with)
+                    if (currentPath === url || currentPath.startsWith(url + '/')) {
+                        // Only activate if there's no category in current URL (to avoid conflicts)
+                        if (!currentCategory) {
+                            isActive = true;
+                        }
+                    }
+                }
+                // Fallback: exact href match
+                else if (href && (currentPath + currentSearch === href)) {
+                    isActive = true;
+                }
+                
+                if (isActive) {
+                    link.classList.add('active-nav-link');
+                    // Selected tab should be medium, others regular
+                    link.classList.add('font-medium');
+                    link.classList.remove('font-normal');
+                    const indicator = document.createElement('span');
+                    indicator.className = 'bg-primary';
+                    indicator.style.cssText = 'position: absolute; bottom: 0; left: 0; right: 0; height: 2px; z-index: 10;';
+                    link.appendChild(indicator);
+                } else {
+                    link.classList.remove('font-medium');
+                    link.classList.add('font-normal');
+                }
+            });
+        }
+        
+        // Update active link on page load
+        updateActiveNavLink();
+        
+        // Update active link when navigating (for SPA-like behavior)
+        window.addEventListener('popstate', updateActiveNavLink);
+        
+    })();
+
+    // More Tabs Dropdown Toggle
+    (function() {
+        const moreTabsButton = document.getElementById('moreTabsButton');
+        const moreTabsDropdown = document.getElementById('moreTabsDropdown');
+        const moreTabsIcon = document.getElementById('moreTabsIcon');
+        const moreTabsContainer = document.getElementById('moreTabsContainer');
+        
+        if (!moreTabsButton || !moreTabsDropdown || !moreTabsIcon) return;
+        
+        let isDropdownOpen = false;
+        
+        function toggleDropdown() {
+            isDropdownOpen = !isDropdownOpen;
+            
+            if (isDropdownOpen) {
+                moreTabsDropdown.classList.remove('hidden');
+                moreTabsIcon.style.transform = 'rotate(180deg)';
+                moreTabsButton.setAttribute('aria-expanded', 'true');
+            } else {
+                moreTabsDropdown.classList.add('hidden');
+                moreTabsIcon.style.transform = 'rotate(0deg)';
+                moreTabsButton.setAttribute('aria-expanded', 'false');
+            }
+        }
+        
+        function closeDropdown() {
+            if (isDropdownOpen) {
+                isDropdownOpen = false;
+                moreTabsDropdown.classList.add('hidden');
+                moreTabsIcon.style.transform = 'rotate(0deg)';
+                moreTabsButton.setAttribute('aria-expanded', 'false');
+            }
+        }
+        
+        // Toggle dropdown on button click
+        moreTabsButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleDropdown();
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (moreTabsContainer && !moreTabsContainer.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+        
+        // Close dropdown when clicking on a link inside
+        const dropdownLinks = moreTabsDropdown.querySelectorAll('a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                closeDropdown();
+            });
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isDropdownOpen) {
+                closeDropdown();
+            }
+        });
+    })();
+  </script>
+  <!-- Header Styles -->
+  <style>
+   /* Ensure sticky header works properly */
+    /* header[data-hero-section] {
+        position: sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 50 !important;
+    } */
+    
+    /* Ensure parent containers don't interfere with sticky */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Force search input font size */
+    #searchInput,
+    #mobileSearchInput {
+        font-size: 13px !important;
+    }
+    
+    /* Placeholder color */
+    #searchInput::placeholder,
+    #mobileSearchInput::placeholder {
+        color: #797979 !important;
+    }
+    
+    /* Focus border - black on mobile search only */
+    #searchInput:focus {
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    #mobileSearchInput:focus {
+        border: 0.8px solid #000000 !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    @media (max-width: 640px) {
+        #mobileSearchInput,
+        #mobileSearchInput:focus {
+            border: none !important;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+        }
+    }
+    
+    .nav-link {
+        position: relative;
+        box-shadow: none !important;
+    }
+
+    .nav-link:not(.active-nav-link) {
+        color: #343434 !important;
+    }
+
+    #moreTabsButton {
+        color: #343434;
+    }
+    
+    .nav-link .bg-primary {
+        box-shadow: none !important;
+    }
+    
+    /* Remove box shadow from tab navigation area */
+    header[data-hero-section] .flex.items-center {
+        box-shadow: none !important;
+    }
+    
+    .nav-link.active-nav-link {
+        color: #000000 !important;
+    }
+
+    .nav-link:not(.active-nav-link):hover {
+        color: #000000 !important;
+    }
+
+    #moreTabsButton:hover {
+        color: #000000 !important;
+    }
+
+    /* Primary color for active indicator - fallback if bg-primary is not defined */
+    .bg-primary {
+        background-color: #1E8B6A; /* green-500 as fallback */
+    }
+    
+    .nav-link .bg-primary {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        z-index: 10;
+    }
+    
+    /* Ensure navigation container allows border to be visible */
+    .border-b {
+        position: relative;
+        overflow: visible;
+    }
+    
+    /* Ensure navigation links container doesn't clip the border */
+    .overflow-x-auto {
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+    
+    /* Hide scrollbar for navigation but allow scrolling on mobile */
+    .overflow-x-auto::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+    
+    .overflow-x-auto {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    /* Ensure border is visible on small screens */
+    @media (max-width: 640px) {
+        .nav-link .bg-primary {
+            height: 2px;
+            bottom: -1px;
+        }
+        
+        .border-b {
+            padding-bottom: 0;
+        }
+    }
+    
+    /* More Tabs Dropdown Styles */
+    #moreTabsContainer {
+        overflow: visible !important;
+        z-index: 100;
+    }
+    
+    #moreTabsDropdown {
+        animation: fadeInDown 0.2s ease-out;
+        position: absolute;
+        visibility: visible;
+    }
+    
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    #moreTabsButton:hover {
+        cursor: pointer;
+    }
+    
+    #moreTabsDropdown a {
+        display: block;
+        text-decoration: none;
+    }
+  </style>
+  <!-- Track Order Modal Styles -->
+  <style>
+   /* Track Order Modal Backdrop */
+    #trackOrderBackdrop {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
+    /* Track Order Modal Container */
+    #trackOrderModal {
+        animation: fadeIn 0.2s ease-out;
+    }
+
+    #trackOrderModal .bg-modal-bg {
+        animation: slideUp 0.3s ease-out;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Toggle Button Styles */
+    button[data-track-order-toggle] {
+        position: relative;
+        transition: all 0.2s ease;
+    }
+
+    button[data-track-order-toggle][data-active] {
+        background-color: var(--primary, #2BA26F) !important;
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+
+    button[data-track-order-toggle][data-active]:hover {
+        background-color: var(--primary, #2BA26F) !important;
+        opacity: 0.9;
+    }
+
+    button[data-track-order-toggle][data-inactive] {
+        background-color: transparent !important;
+        color: var(--foreground, #171717) !important;
+        font-weight: 400;
+    }
+
+    button[data-track-order-toggle][data-inactive]:hover {
+        background-color: var(--surface, #ffffff) !important;
+    }
+
+    /* Input Focus States */
+    #trackOrderModal input:focus {
+        outline: none;
+        border-color: var(--primary, #2BA26F);
+        box-shadow: 0 0 0 2px rgba(43, 162, 111, 0.1);
+    }
+
+    /* Submit Button Styles */
+    button[data-track-order-submit] {
+        transition: all 0.2s ease;
+    }
+
+    button[data-track-order-submit]:hover:not(:disabled) {
+        background-color: var(--primary, #2BA26F) !important;
+        opacity: 0.9;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(43, 162, 111, 0.2);
+    }
+
+    button[data-track-order-submit]:active:not(:disabled) {
+        transform: translateY(0);
+    }
+
+    button[data-track-order-submit][data-loading] {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    /* Cancel Button Styles */
+    button[data-track-order-cancel]:hover {
+        background-color: var(--surface-hover, #f9fafb) !important;
+    }
+
+    /* Error Message Styles */
+    #trackOrderError {
+        animation: shake 0.3s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes shake {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-10px);
+        }
+        75% {
+            transform: translateX(10px);
+        }
+    }
+
+    /* Modal Responsive Styles */
+    @media (max-width: 640px) {
+        #trackOrderModal {
+            padding: 1rem;
+        }
+
+        #trackOrderModal .bg-modal-bg {
+            max-width: 100%;
+        }
+
+        button[data-track-order-toggle] {
+            font-size: 0.875rem;
+            padding: 0.5rem 0.75rem;
+        }
+    }
+  </style>
+  <!-- Products Listing Page -->
+  <div class="bg-background" data-products-listing="">
+   <!-- Page Header -->
+   <div class="bg-surface border-b border-border" data-page-header="">
+    <div class="flex flex-col lg:flex-row">
+     <!-- Left Section: Text Content -->
+     <div class="w-full bg-surface flex justify-center items-center px-6 lg:px-12 pt-10 sm:pt-12 md:pt-12 lg:pt-16 pb-8 lg:pb-12 order-2 lg:order-1">
+      <div class="text-center flex flex-col pl-0 lg:pl-6 text-left">
+       <h1 class="text-[24px] lg:text-[43px] xl:text-[50px] font-semibold text-foreground mb-4 lg:mb-6 font-urbanist line-clamp-2 md:max-w-[400px] lg:max-w-[680px] mx-auto" data-page-title="" title="Speakers">
+        Speakers
+       </h1>
+       <p class="text-[12px] sm:text-[14px] lg:text-[20px] text-foreground font-ibm-plex-sans font-normal leading-relaxed md:max-w-[500px] lg:max-w-[680px] line-clamp-3 mx-auto" data-page-subtitle="" title="A versatile and practical solution for your daily needs">
+        A versatile and practical solution for your daily needs
+       </p>
+       <p class="text-sm text-muted font-ibm-plex-sans font-normal mt-4" data-results-count="">
+       </p>
+      </div>
+     </div>
+     <!-- Right Section: Cover Image -->
+     <!-- <div class="w-full lg:w-3/5 relative h-80 lg:h-[28rem] xl:h-[30rem] flex-shrink-0 order-1 lg:order-2">
+                
+                    <div
+                        class="w-full h-full bg-cover bg-top bg-no-repeat"
+                        style="background-image: url('https://cdn.xpress.site/697dbc21b8eab2d421762180/697f398cb8eab2d4217624ec');"
+                        aria-label="Speakers"
+                    ></div>
+                
+            </div> -->
+    </div>
+   </div>
+   <div class="max-w-[1600px] mx-auto lg:px-8 py-6">
+    <div class="flex flex-col lg:flex-row gap-6">
+     <!-- Filters Sidebar -->
+     <div class="lg:w-72 hidden lg:block" data-filters-sidebar="">
+      <div class="bg-testimonials-bg border border-border p-6">
+       <div class="flex items-center justify-between gap-2 mb-6">
+        <div class="flex items-center gap-2">
+         <i class="fas fa-sliders-h text-base text-foreground">
+         </i>
+         <h3 class="text-[15px] font-ibm-plex-sans font-medium text-foreground">
+          Filter
+         </h3>
+        </div>
+        <button class="text-primary hover:text-primary/80 hover:underline transition font-ibm-plex-sans font-normal text-sm lg:text-[13px] cursor-pointer" data-clear-filters="">
+         Clear Filters
+        </button>
+       </div>
+       <!-- Availability -->
+       <div class="mb-6">
+        <h4 class="font-ibm-plex-sans font-medium text-foreground mb-3 text-[14px]">
+         Availability
+        </h4>
+        <div class="space-y-2">
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-filter-in-stock="" type="checkbox"/>
+          <span class="ml-2 text-[14px] font-ibm-plex-sans font-normal text-foreground cursor-pointer">
+           In Stock
+          </span>
+         </label>
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-filter-new="" type="checkbox"/>
+          <span class="ml-2 text-[14px] font-ibm-plex-sans font-normal text-foreground cursor-pointer">
+           New Arrivals
+          </span>
+         </label>
+        </div>
+       </div>
+       <!-- Brands (hidden until load; shown only when API returns brand facets) -->
+       <div class="mb-6" data-brands-filter-section="">
+        <h4 class="font-ibm-plex-sans font-medium text-foreground mb-3 text-[14px]">
+         Brands
+        </h4>
+        <div class="space-y-2 max-h-40 overflow-y-auto scrollbar-thin" data-brands-list="">
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-brand-checkbox="" type="checkbox" value="MZ"/>
+          <span class="ml-2 text-[14px] text-foreground font-ibm-plex-sans font-normal cursor-pointer" data-brand-name="">
+           MZ
+          </span>
+         </label>
+        </div>
+       </div>
+       <!-- TODO: Add Apply Filters and Clear Filters buttons -->
+       <!-- <div class="space-y-2">
+                        <button class="w-full btn-primary" data-apply-filters>
+                            Apply Filters
+                        </button>
+                        <button class="w-full btn-secondary" data-clear-filters>
+                            Clear Filters
+                        </button>
+                    </div> -->
+      </div>
+     </div>
+     <!-- Mobile Filters Overlay -->
+     <div class="fixed inset-0 z-50 bg-testimonials-bg hidden lg:hidden flex flex-col" data-mobile-filters="">
+      <!-- Close button positioned at top right -->
+      <button class="absolute top-2 right-4 z-10 text-muted hover:text-foreground transition p-2" data-close-filters="">
+       <i class="fas fa-times text-2xl">
+       </i>
+      </button>
+      <!-- Scrollable content area -->
+      <div class="flex-1 overflow-y-auto p-6 pb-24">
+       <div class="flex items-center gap-2 mb-6">
+        <i class="fas fa-sliders-h text-base text-foreground">
+        </i>
+        <h3 class="text-[15px] font-ibm-plex-sans font-medium text-foreground">
+         Filter
+        </h3>
+       </div>
+       <!-- Availability -->
+       <div class="mb-6">
+        <h4 class="font-ibm-plex-sans font-medium text-foreground mb-3 text-[14px]">
+         Availability
+        </h4>
+        <div class="space-y-4">
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-filter-in-stock-mobile="" type="checkbox"/>
+          <span class="ml-2 text-[14px] font-ibm-plex-sans font-normal text-foreground cursor-pointer">
+           In Stock
+          </span>
+         </label>
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-filter-new-mobile="" type="checkbox"/>
+          <span class="ml-2 text-[14px] font-ibm-plex-sans font-normal text-foreground cursor-pointer">
+           New Arrivals
+          </span>
+         </label>
+        </div>
+       </div>
+       <!-- Brands (hidden until load; shown only when API returns brand facets) -->
+       <div class="mb-6" data-brands-filter-section="">
+        <h4 class="font-ibm-plex-sans font-medium text-foreground mb-3 text-[14px]">
+         Brands
+        </h4>
+        <div class="space-y-4 max-h-40 overflow-y-auto scrollbar-thin" data-brands-list-mobile="">
+         <label class="flex items-center cursor-pointer hover:opacity-80">
+          <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-brand-checkbox="" type="checkbox" value="MZ"/>
+          <span class="ml-2 text-[14px] text-foreground font-ibm-plex-sans font-normal cursor-pointer" data-brand-name="">
+           MZ
+          </span>
+         </label>
+        </div>
+       </div>
+      </div>
+      <!-- Fixed buttons at bottom -->
+      <div class="border-t border-border bg-testimonials-bg p-4 space-y-2">
+       <button class="w-full btn-primary" data-apply-filters-mobile="">
+        Apply Filters
+       </button>
+       <button class="w-full btn-secondary" data-clear-filters-mobile="">
+        Clear Filters
+       </button>
+      </div>
+     </div>
+     <!-- Main Content -->
+     <div class="flex-1">
+      <!-- Toolbar -->
+      <div class="mb-4 lg:mb-6">
+       <!-- Mobile Toolbar (visible on small screens) -->
+       <div class="flex items-center justify-between gap-2 lg:hidden mb-6 px-6">
+        <button class="inline-flex items-center gap-2 shrink-0 text-foreground font-ibm-plex-sans text-[13px] font-normal cursor-pointer" data-toggle-filters="">
+         <i class="fas fa-sliders-h text-base">
+         </i>
+         <span>
+          Filter
+         </span>
+        </button>
+        <span class="text-[12px] text-foreground font-ibm-plex-sans font-normal" data-products-count="">
+         1 product(s)
+        </span>
+        <div class="relative shrink-0 max-w-[10rem]">
+         <select class="appearance-none w-full bg-surface border border-border rounded-[7px] pl-2.5 pr-7 py-2 text-foreground font-ibm-plex-sans font-normal focus:outline-none focus:ring-0 cursor-pointer transition-colors hover:bg-surface-hover" data-sort-select="" style="font-size: 13px !important;">
+          <option value="">
+           Sort by
+          </option>
+          <option value="createdAt-desc">
+           Newest First
+          </option>
+          <option value="createdAt-asc">
+           Oldest First
+          </option>
+          <option value="price-asc">
+           Price: Low to High
+          </option>
+          <option value="price-desc">
+           Price: High to Low
+          </option>
+          <option value="name-asc">
+           Name: A to Z
+          </option>
+          <option value="name-desc">
+           Name: Z to A
+          </option>
+          <option value="rating-desc">
+           Highest Rated
+          </option>
+         </select>
+         <i class="fas fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-muted text-xs pointer-events-none">
+         </i>
+        </div>
+       </div>
+       <!-- Desktop Toolbar (hidden on small screens) -->
+       <div class="hidden lg:flex items-center justify-between gap-4">
+        <span class="text-[15px] text-foreground font-ibm-plex-sans font-normal" data-products-count="">
+         Showing 1 of 1 products
+        </span>
+        <div class="relative ml-auto">
+         <select class="appearance-none bg-surface border border-border rounded-[7px] px-4 py-2.5 pr-7 text-foreground font-ibm-plex-sans font-normal focus:outline-none focus:ring-0 cursor-pointer transition-colors hover:bg-surface-hover" data-sort-select="" style="font-size: 15px !important;">
+          <option value="">
+           Sort by
+          </option>
+          <option value="createdAt-desc">
+           Newest First
+          </option>
+          <option value="createdAt-asc">
+           Oldest First
+          </option>
+          <option value="price-asc">
+           Price: Low to High
+          </option>
+          <option value="price-desc">
+           Price: High to Low
+          </option>
+          <option value="name-asc">
+           Name: A to Z
+          </option>
+          <option value="name-desc">
+           Name: Z to A
+          </option>
+          <option value="rating-desc">
+           Highest Rated
+          </option>
+         </select>
+         <i class="fas fa-chevron-down absolute right-2.5 top-1/2 -translate-y-1/2 text-muted text-xs pointer-events-none mr-1">
+         </i>
+        </div>
+       </div>
+      </div>
+      <!-- Loading State -->
+      <div class="flex items-center justify-center py-12 min-h-[400px] hidden" data-loading-state="">
+       <div class="text-center">
+        <i class="fas fa-spinner fa-spin text-4xl text-primary mb-4">
+        </i>
+        <p class="text-muted font-ibm-plex-sans font-normal">
+         Loading products...
+        </p>
+       </div>
+      </div>
+      <!-- Error State -->
+      <div class="flex items-center justify-center py-12 min-h-[400px] hidden" data-error-state="">
+       <div class="text-center">
+        <p class="text-red-600 font-ibm-plex-sans mb-4" data-error-message="">
+         Failed to load products
+        </p>
+        <button class="btn-primary font-ibm-plex-sans" data-retry-loading="">
+         Try Again
+        </button>
+       </div>
+      </div>
+      <!-- Empty State -->
+      <div class="flex items-center justify-center py-12 min-h-[400px] hidden" data-empty-state="">
+       <div class="text-center">
+        <div class="w-20 h-20 bg-surface rounded-full flex items-center justify-center mx-auto mb-4">
+         <i class="fas fa-shopping-bag text-4xl text-muted">
+         </i>
+        </div>
+        <h3 class="text-lg font-ibm-plex-sans font-semibold text-foreground mb-2">
+         No products found
+        </h3>
+        <p class="text-muted mb-4 font-ibm-plex-sans font-normal" data-empty-message="">
+         No products available
+        </p>
+       </div>
+      </div>
+      <!-- Products Grid/List -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-10 px-2 lg:px-0" data-products-grid="">
+       <a class="bg-surface block product-card" data-analytics-event="product_click" data-analytics-from="list" data-image-hover-init="true" data-product-link="" href="/products/battle-armour-speaker">
+        <div class="relative overflow-hidden" data-product-image-container="">
+         <div class="relative w-full aspect-[3/4] overflow-hidden product-image-container">
+          <img alt="Battle Armour Speaker" class="product-image absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out" src="images/697edc85e8eefc9253b2706d" style="transform: translateX(0px);"/>
+          <img alt="Battle Armour Speaker" class="product-image absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out" src="images/697edc95b8eab2d42176237a" style="transform: translateX(100%);"/>
+         </div>
+         <div class="w-full aspect-[3/4] bg-surface-hover flex items-center justify-center absolute inset-0 hidden" data-product-image-placeholder="">
+          <i class="fas fa-box text-6xl text-muted">
+          </i>
+         </div>
+         <!-- Badges container - all badges together with flex-wrap -->
+         <div class="absolute top-2 left-2 flex flex-wrap gap-1.5 max-w-[calc(100%-1rem)] font-ibm-plex-sans font-semibold" data-product-badges="">
+          <!-- Badges will be added here -->
+         </div>
+         <div class="absolute bottom-2 left-2 hidden items-center gap-1 rounded px-1.5 py-0.5 bg-black/65 text-white text-[10px] lg:text-[11px] font-ibm-plex-sans font-medium" data-product-rating="">
+          <span data-product-rating-value="">
+           0
+          </span>
+          <i class="fas fa-star text-[9px] lg:text-[10px] text-[#DEAA1B]">
+          </i>
+          (
+          <span data-product-rating-count="">
+           0
+          </span>
+          reviews)
+         </div>
+        </div>
+        <div class="pt-2 pl-2 pb-3 pr-3 lg:pt-4 lg:pl-2 lg:pb-[13px] lg:pr-[25px] flex flex-col">
+         <h3 class="font-ibm-plex-sans font-medium text-foreground text-sm lg:text-[14px] mb-1 leading-tight line-clamp-1" data-product-name="">
+          Battle Armour Speaker
+         </h3>
+         <p class="text-[12.5px] text-muted font-ibm-plex-sans font-normal mb-2 line-clamp-1 h-[1.25rem] shrink-0 hidden" data-product-brand="">
+         </p>
+         <div class="mt-auto min-h-[1.25rem] flex items-end" data-product-status-row="">
+          <div class="flex items-end space-x-2" data-product-price-row="">
+           <span class="product-price-current font-inter font-normal text-[12.5px] text-black">
+            ₹
+            <span data-product-price="">
+             499.00
+            </span>
+           </span>
+           <span class="product-price-original text-[12.5px] line-through font-urbanist font-normal hidden" data-product-original-price="" style="color: #6E6E6E;">
+           </span>
+          </div>
+          <div class="flex items-end" data-product-out-of-stock="">
+           <span class="font-ibm-plex-sans font-medium text-[12.5px] leading-[1.25rem] uppercase" style="color: #C31616;">
+            OUT OF STOCK
+           </span>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
+      <!-- Infinite Scroll Loading -->
+      <div class="flex items-center justify-center py-8 hidden" data-load-more="">
+       <div class="flex items-center space-x-2" data-load-more-loading="">
+        <i class="fas fa-spinner fa-spin text-primary">
+        </i>
+        <span class="text-muted text-sm font-ibm-plex-sans font-normal">
+         Loading more products...
+        </span>
+       </div>
+       <div class="text-muted text-sm font-ibm-plex-sans font-normal hidden" data-load-more-hint="">
+        Scroll down to load more products
+       </div>
+      </div>
+      <!-- End of Results -->
+      <div class="px-2 lg:px-0 mt-10 lg:mt-12" data-end-of-results="">
+       <div class="border-t border-dashed border-[#c0c0c0] pt-6 pb-8 flex items-center justify-center">
+        <div class="text-center">
+         <p class="text-muted text-[13px] md:text-sm font-ibm-plex-sans font-normal">
+          You've reached the end of the results
+         </p>
+         <p class="text-muted text-[12px] font-ibm-plex-sans font-normal mt-1" data-total-products-text="">
+          Showing all 1 products
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Product Card Template -->
+  <template id="productCardTemplate">
+   <a class="bg-surface block product-card" data-analytics-event="product_click" data-analytics-from="list" data-product-link="" href="#">
+    <div class="relative overflow-hidden" data-product-image-container="">
+     <div class="relative w-full aspect-[3/4] overflow-hidden product-image-container">
+      <!-- Images will be dynamically added here by JavaScript -->
+     </div>
+     <div class="w-full aspect-[3/4] bg-surface-hover flex items-center justify-center absolute inset-0" data-product-image-placeholder="">
+      <i class="fas fa-box text-6xl text-muted">
+      </i>
+     </div>
+     <!-- Badges container - all badges together with flex-wrap -->
+     <div class="absolute top-2 left-2 flex flex-wrap gap-1.5 max-w-[calc(100%-1rem)] font-ibm-plex-sans font-semibold" data-product-badges="">
+      <!-- Badges will be added here -->
+     </div>
+     <div class="absolute bottom-2 left-2 hidden items-center gap-1 rounded px-1.5 py-0.5 bg-black/65 text-white text-[10px] lg:text-[11px] font-ibm-plex-sans font-medium" data-product-rating="">
+      <span data-product-rating-value="">
+      </span>
+      <i class="fas fa-star text-[9px] lg:text-[10px] text-[#DEAA1B]">
+      </i>
+      (
+      <span data-product-rating-count="">
+      </span>
+      reviews)
+     </div>
+    </div>
+    <div class="pt-2 pl-2 pb-3 pr-3 lg:pt-4 lg:pl-2 lg:pb-[13px] lg:pr-[25px] flex flex-col">
+     <h3 class="font-ibm-plex-sans font-medium text-foreground text-sm lg:text-[14px] mb-1 leading-tight line-clamp-1" data-product-name="">
+     </h3>
+     <p class="text-[12.5px] text-muted font-ibm-plex-sans font-normal mb-2 line-clamp-1 h-[1.25rem] shrink-0" data-product-brand="">
+     </p>
+     <div class="mt-auto min-h-[1.25rem] flex items-end" data-product-status-row="">
+      <div class="flex items-end space-x-2" data-product-price-row="">
+       <span class="product-price-current font-inter font-normal text-[12.5px] text-black">
+        ₹
+        <span data-product-price="">
+        </span>
+       </span>
+       <span class="product-price-original text-[12.5px] line-through font-urbanist font-normal hidden" data-product-original-price="" style="color: #6E6E6E;">
+       </span>
+      </div>
+      <div class="flex items-end" data-product-out-of-stock="">
+       <span class="font-ibm-plex-sans font-medium text-[12.5px] leading-[1.25rem] uppercase" style="color: #C31616;">
+        OUT OF STOCK
+       </span>
+      </div>
+     </div>
+    </div>
+   </a>
+  </template>
+  <style>
+   [data-product-out-of-stock] {
+        display: none;
+    }
+
+    .product-card[data-out-of-stock="true"] [data-product-price-row] {
+        display: none;
+    }
+
+    .product-card[data-out-of-stock="true"] [data-product-out-of-stock] {
+        display: flex;
+    }
+
+    .product-card [data-product-brand].hidden {
+        display: block !important;
+        visibility: hidden;
+    }
+
+    /* Myntra-style product card hover shadow on listing grid */
+    [data-products-grid] .product-card {
+        transition: box-shadow 0.2s ease;
+    }
+
+    [data-products-grid] .product-card:hover {
+        box-shadow: 0 2px 16px 4px rgba(40, 44, 63, 0.07);
+        transform: none;
+    }
+
+    [data-products-grid] .product-card:hover img {
+        transform: none;
+    }
+
+    [data-product-badges] span {
+        font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+        font-weight: 600 !important;
+    }
+
+    .product-price-current,
+    .product-price-current [data-product-price] {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 12.5px !important;
+        line-height: 1.25rem !important;
+    }
+
+    .product-price-original,
+    .product-price-original::before {
+        font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 12.5px !important;
+    }
+
+    .product-price-original::before {
+        content: '₹';
+    }
+
+    [data-products-listing] .filter-checkbox {
+        transition: border-color 0.15s ease;
+    }
+
+    [data-products-listing] .filter-checkbox:hover {
+        border-color: #9ca3af !important;
+    }
+    
+    /* Mobile filters overlay animation - slide from left */
+    [data-mobile-filters] {
+        display: block !important;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+    }
+    
+    [data-mobile-filters]:not(.hidden) {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0s;
+    }
+    
+    [data-mobile-filters].hidden {
+        visibility: hidden;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+    }
+  </style>
+  <!-- Product List Item Template -->
+  <template id="productListItemTemplate">
+   <a class="bg-surface shadow-sm border border-border overflow-hidden transition-shadow duration-200 block flex product-card" data-analytics-event="product_click" data-analytics-from="list" data-product-link="" href="#">
+    <div class="relative w-48 h-48 flex-shrink-0 overflow-hidden" data-product-image-container="">
+     <div class="relative w-full h-full overflow-hidden product-image-container">
+      <!-- Images will be dynamically added here by JavaScript -->
+     </div>
+     <div class="w-full h-full bg-surface-hover flex items-center justify-center absolute inset-0" data-product-image-placeholder="">
+      <i class="fas fa-box text-6xl text-muted">
+      </i>
+     </div>
+     <div class="absolute top-3 left-3 flex flex-col gap-2 font-ibm-plex-sans font-semibold" data-product-badges="">
+      <!-- Badges will be added here -->
+     </div>
+     <div class="absolute bottom-2 left-2 hidden items-center gap-1 rounded px-1.5 py-0.5 bg-black/65 text-white text-[10px] lg:text-[11px] font-ibm-plex-sans font-medium" data-product-rating="">
+      <span data-product-rating-value="">
+      </span>
+      <i class="fas fa-star text-[9px] lg:text-[10px] text-[#DEAA1B]">
+      </i>
+      (
+      <span data-product-rating-count="">
+      </span>
+      reviews)
+     </div>
+    </div>
+    <div class="p-4 flex-1">
+     <div class="flex items-start justify-between mb-2 border-t border-border pb-2">
+      <div class="flex-1">
+       <h3 class="font-ibm-plex-sans font-semibold text-foreground text-base mb-1" data-product-name="">
+       </h3>
+       <p class="text-sm text-muted font-ibm-plex-sans font-normal h-[1.25rem] shrink-0" data-product-brand="">
+       </p>
+      </div>
+     </div>
+     <div class="flex items-end min-h-[1.25rem]" data-product-status-row="">
+      <div class="flex items-end space-x-2" data-product-price-row="">
+       <span class="product-price-current font-inter font-normal text-[12.5px] text-black">
+        ₹
+        <span data-product-price="">
+        </span>
+       </span>
+       <span class="product-price-original text-[12.5px] line-through font-urbanist font-normal hidden" data-product-original-price="" style="color: #6E6E6E;">
+       </span>
+      </div>
+      <div class="flex items-end" data-product-out-of-stock="">
+       <span class="font-ibm-plex-sans font-medium text-[12.5px] leading-[1.25rem] uppercase" style="color: #C31616;">
+        OUT OF STOCK
+       </span>
+      </div>
+     </div>
+    </div>
+   </a>
+  </template>
+  <!-- Brand Checkbox Template -->
+  <template id="brandCheckboxTemplate">
+   <label class="flex items-center cursor-pointer hover:opacity-80">
+    <input class="filter-checkbox rounded border-border text-primary focus:ring-primary w-4 h-4 cursor-pointer accent-primary" data-brand-checkbox="" type="checkbox" value=""/>
+    <span class="ml-2 text-[14px] text-foreground font-ibm-plex-sans font-normal cursor-pointer" data-brand-name="">
+    </span>
+   </label>
+  </template>
+  <script>
+   (function() {
+    // Only enable image swipe on screens larger than sm (640px)
+    const isLargeScreen = () => window.innerWidth > 640;
+    
+    // Product image hover behavior - single swipe to 2nd image (max 2 images, matching featured-products)
+    function initProductImageHover() {
+        const productCards = document.querySelectorAll('.product-card:not([data-image-hover-init])');
+        
+        productCards.forEach(card => {
+            const imageContainer = card.querySelector('.product-image-container');
+            if (!imageContainer) return;
+            
+            const images = Array.from(imageContainer.querySelectorAll('.product-image')).slice(0, 2);
+            if (images.length <= 1) return;
+            
+            card.setAttribute('data-image-hover-init', 'true');
+            
+            let currentIndex = 0;
+            
+            const showImage = (index) => {
+                images.forEach((img, i) => {
+                    if (i === index) {
+                        img.style.transform = 'translateX(0)';
+                    } else if (i < index) {
+                        img.style.transform = 'translateX(-100%)';
+                    } else {
+                        img.style.transform = 'translateX(100%)';
+                    }
+                });
+            };
+            
+            const onHoverStart = () => {
+                if (!isLargeScreen()) return;
+                if (currentIndex !== 0) return;
+                currentIndex = 1;
+                showImage(1);
+            };
+            
+            const onHoverEnd = () => {
+                currentIndex = 0;
+                showImage(0);
+            };
+            
+            card.addEventListener('mouseenter', onHoverStart);
+            card.addEventListener('mouseleave', onHoverEnd);
+        });
+    }
+    
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProductImageHover);
+    } else {
+        initProductImageHover();
+    }
+    
+    // Re-initialize when products are loaded (for dynamic content)
+    const productsGrid = document.querySelector('[data-products-grid]');
+    if (productsGrid) {
+        const observer = new MutationObserver(function(mutations) {
+            initProductImageHover();
+        });
+        observer.observe(productsGrid, { childList: true, subtree: true });
+    }
+})();
+  </script>
+  <!-- Footer -->
+  <footer class="bg-surface w-full border-t border-b border-border text-foreground pt-12" data-site-id="697dbc21b8eab2d421762180">
+   <div class="pb-10 md:pb-14 mb-12 border-b border-border w-full">
+    <div class="max-w-[1600px] mx-auto lg:px-12">
+     <!-- Top Section: Service Propositions + Payment Methods (match footer-v2.tsx) -->
+     <!-- Desktop (md+): horizontal layout -->
+     <div class="hidden md:flex flex-col lg:flex-row justify-center md:justify-center lg:justify-between items-center md:items-center lg:items-start gap-18 w-full">
+      <!-- Service Highlights -->
+      <div class="flex flex-col md:flex-row flex-1 md:justify-center lg:justify-start">
+       <!-- Cash On Delivery -->
+       <!-- Free Shipping -->
+       <div class="flex flex-col items-center text-center flex-1 pr-4 md:pr-8 md:border-r border-border">
+        <div class="mb-3 text-foreground">
+         <img alt="Free Shipping" class="w-8 h-8 object-contain" src="images/shipping.png"/>
+        </div>
+        <h5 class="text-[12px] sm:text-[15px] font-medium font-ibm-plex-sans mb-1 text-foreground">
+         Free
+                      Shipping
+        </h5>
+        <p class="text-[13px] text-subtle font-ibm-plex-sans font-normal max-w-[200px] mx-auto">
+         Get free shipping on your orders.
+        </p>
+       </div>
+       <!-- Secure Payment -->
+       <div class="flex flex-col items-center text-center flex-1 pl-4 md:pl-4">
+        <div class="mb-3 text-foreground">
+         <img alt="Secure Payment" class="w-8 h-8 object-contain" src="images/shield.png"/>
+        </div>
+        <h5 class="text-[12px] sm:text-[15px] font-medium font-ibm-plex-sans mb-1 text-foreground">
+         Secure Payment
+        </h5>
+        <p class="text-[13px] text-subtle font-ibm-plex-sans font-normal max-w-[200px] mx-auto">
+         Your
+                          payment information is processed securely.
+        </p>
+       </div>
+      </div>
+      <!-- Payment Methods -->
+      <div class="hidden md:block lg:hidden w-full border-t border-border mt-12 mb-12">
+      </div>
+      <div class="flex flex-col items-center md:items-center lg:items-start gap-3 text-center md:border-l-0 lg:border-l border-border md:pl-10 lg:pl-8 lg:mt-0">
+       <h5 class="font-medium font-ibm-plex-sans text-foreground">
+        We accept:
+       </h5>
+       <div class="flex flex-col gap-2 items-center md:items-center lg:items-start">
+        <!-- First Row - Payment Buttons -->
+        <div class="flex flex-wrap items-center justify-center md:justify-center lg:justify-start gap-2">
+         <img alt="UPI" class="h-8 w-auto object-contain" src="images/upi-icon.png"/>
+        </div>
+        <!-- Second Row - Card Logos -->
+        <div class="flex items-center justify-center md:justify-center lg:justify-start">
+         <img alt="Payment Cards" class="h-10 w-auto object-contain" src="images/visacards.png"/>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Mobile (<md): stack + payment methods divider -->
+     <div class="block md:hidden w-full">
+      <div class="grid grid-cols-2 gap-8 items-start px-6 md:px-2">
+       <div class="flex flex-col items-center text-center">
+        <div class="mb-3 text-foreground">
+         <img alt="Free Shipping" class="w-8 h-8 object-contain" src="images/shipping.png"/>
+        </div>
+        <h5 class="text-[12px] sm:text-[15px] font-medium font-ibm-plex-sans mb-1 text-foreground">
+         Free Shipping
+        </h5>
+        <p class="text-[11px] sm:text-[13px] text-subtle font-ibm-plex-sans font-normal max-w-[220px] mx-auto">
+         Get free shipping on your orders.
+        </p>
+       </div>
+       <div class="flex flex-col items-center text-center">
+        <div class="mb-3 text-foreground">
+         <img alt="Secure Payment" class="w-8 h-8 object-contain" src="images/shield.png"/>
+        </div>
+        <h5 class="text-[12px] sm:text-[15px] font-medium font-ibm-plex-sans mb-1 text-foreground">
+         Secure Payment
+        </h5>
+        <p class="text-[11px] sm:text-[13px] text-subtle font-ibm-plex-sans font-normal max-w-[220px] mx-auto">
+         Your payment information is processed securely.
+        </p>
+       </div>
+      </div>
+      <div class="border-t border-border w-full my-8">
+      </div>
+      <div class="flex flex-col items-center gap-3 w-full mb-8">
+       <h5 class="font-medium font-ibm-plex-sans text-foreground">
+        We accept:
+       </h5>
+       <div class="flex flex-col gap-2 items-center">
+        <!-- First Row - Payment Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-2">
+         <img alt="UPI" class="h-8 w-auto object-contain" src="images/upi-icon.png"/>
+        </div>
+        <!-- Second Row - Card Logos -->
+        <div class="flex items-center justify-center">
+         <img alt="Payment Cards" class="h-10 w-auto object-contain" src="images/visacards.png"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Main Footer Section: Logo, Navigation & Social Media -->
+   <div class="max-w-[1600px] mx-auto px-6 md:px-10 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-10 lg:gap-12 mb-12">
+     <div class="flex flex-col lg:flex-row w-full lg:flex-1 lg:min-w-0 items-center lg:items-start gap-8 lg:gap-10 xl:gap-12">
+      <!-- Logo Section -->
+      <div class="flex flex-col items-center lg:items-start shrink-0">
+       <div class="mb-2 lg:mb-0">
+        <img alt="Company Logo" src="images/697f7a84b8eab2d42176259a" style="width: auto; height: 48px;"/>
+       </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 w-full lg:flex lg:flex-wrap gap-x-6 gap-y-8 sm:gap-x-8 lg:gap-x-10 lg:gap-y-8 lg:flex-1 lg:min-w-0 items-start text-left">
+       <div class="min-w-0 max-w-[11rem] sm:max-w-[12rem] lg:max-w-[13rem]">
+        <h4 class="font-medium font-ibm-plex-sans lg:text-[16px] text-[14px] text-foreground mb-4 text-sm">
+         Categories
+        </h4>
+        <ul class="space-y-3 text-[14px] font-ibm-plex-sans font-normal text-subtle">
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/products?category=category-1">
+           Premium Cases
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/products?category=category-2">
+           Speakers
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/products?category=category-3">
+           Car Toys
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/products?category=gadgets">
+           Gadgets
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="min-w-0 max-w-[11rem] sm:max-w-[12rem] lg:max-w-[13rem]">
+        <h4 class="font-medium font-ibm-plex-sans lg:text-[16px] text-[14px] text-foreground mb-4 text-sm">
+         Support
+        </h4>
+        <ul class="space-y-3 text-[14px] font-ibm-plex-sans font-normal text-subtle">
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/privacy-policy">
+           Privacy Policy
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/terms-and-conditions">
+           Terms &amp; Conditions
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/refund-policy">
+           Refund Policy
+          </a>
+         </li>
+         <li>
+          <a class="text-subtle hover:text-foreground transition-colors break-words" href="/shipping-policy">
+           Shipping Policy
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col items-start text-left lg:order-last shrink-0 w-full lg:w-auto">
+      <h4 class="font-medium lg:text-[16px] text-[14px] font-ibm-plex-sans text-foreground mb-4 text-sm">
+       Follow
+                us:
+      </h4>
+      <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+       <a aria-label="Follow us on Instagram" class="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 rounded-[8px] flex items-center justify-center" data-analytics-event="social_media_click" data-analytics-from="footer" href="https://www.instagram.com/gadhub.in?igsh=MWVqMmdvaDFoZHVmOQ%3D%3D&amp;utm_source=qr" rel="noopener noreferrer" target="_blank" title="Instagram">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+         </path>
+        </svg>
+       </a>
+       <a aria-label="Chat with us on WhatsApp" class="w-10 h-10 bg-green-500 rounded-[8px] flex items-center justify-center" data-analytics-event="social_media_click" data-analytics-from="footer" href="https://wa.me/917510936247" rel="noopener noreferrer" target="_blank" title="WhatsApp">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="py-8 mb-12 lg:mb-0 lg:mt-0 w-full">
+    <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
+     <p class="text-[13px] font-ibm-plex-sans font-normal text-subtle">
+      © 2026 Gadhub. All Rights Reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Floating WhatsApp Icon (hidden on document pages e.g. invoice) -->
+  <div class="fixed lg:bottom-6 bottom-20 right-6 z-50">
+   <a aria-label="Contact us on WhatsApp" class="flex items-center justify-center lg:w-16 lg:h-16 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 active:scale-95" href="https://wa.me/917510936247" rel="noopener noreferrer" target="_blank">
+    <img alt="WhatsApp" class="w-full h-full object-contain rounded-full" src="images/whatsapp-icon.png"/>
+   </a>
+  </div>
+  <script src="js/bundle.js">
+  </script>
+ </body>
+</html>
