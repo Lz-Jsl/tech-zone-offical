@@ -1,0 +1,520 @@
+/* 
+ * Global Theme CSS Variables
+ * Similar to xpress-web-app/src/app/globals.css
+ * Primary color is set dynamically via inline style on HTML element
+ */
+
+:root {
+  --surface: #ffffff;
+  --surface-hover: #f9fafb;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
+  --muted: #4b5563;
+  --subtle: #6b7280;
+  --primary: #2BA26F;
+  --primary-foreground: #ffffff;
+  --success: #22c55e;
+  --font-ibm-plex-sans-base: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --testimonials-bg: #FAFAFA;
+  --header-hover: #F8F8F8;
+  --hero-bg: #F2F2F2;
+  --hero-bg-hover: #E5E5E5;
+  --read-more-border: #C7C7C7;
+  --post-border: #D8D8D8;
+  --learn-more-bg: #Fcfcfc;
+  --learn-more-border: #969696;
+  --testimonials-headlinetext: #000000;
+  --image-bg: #EDEDED;
+  --input-bg: #FAFAFA;
+  --modal-bg: #ffffff;
+  --btn-bg: #FFFFFF;
+  --description-color: #171717;
+  --get-direction-bg: #FFFFFF;
+  --get-direction-btn-hover: #f9fafb;
+  --get-direction-btn-border: #E2E2E2;
+  --tab-hover-color: #000000;
+  --dark-ai-input-border: #2BA26F;
+  --dark-ai-input-hover: #f9fafb;
+  --ai-input-bg: #F7F7F7;
+  --ai-input-hover: #fafafa;
+  --ai-input-border: #D5D5D5;
+  --input-placeholder-text-color: #171717;
+  --gallery-body-color: #1d1d1d;
+  --ai-human-bg: #F0F0F0;
+  --ai-thinking-bg: #C9C9C9;
+  --markdown-body-background-color: #FAFAFA;
+  --dropdown-hover-bg: #FAFAFA;
+  --learn-more-bg-hover: #FAFAFA;
+  --learn-more-bg-color: #FFFFFF;
+  --close-icon-bg: #C6C6C6;
+  --products-bg: #F5F5F5;
+  --checkout-border: #D9D9D9;
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --secondary: #f9fafb;
+  --secondary-foreground: #171717;
+  --muted-foreground: #6b7280;
+  --accent: #f9fafb;
+  --accent-foreground: #171717;
+  --destructive: #ef4444;
+  --input: #e5e7eb;
+  --ring: #d1d5db;
+}
+
+
+body {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'IBM-Plex-Sans', 'Segoe UI', sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Custom checkbox styling - primary background with white checkmark */
+input[type="checkbox"].accent-primary {
+  accent-color: var(--primary);
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0.25rem !important;
+  background-color: transparent !important;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  outline: none !important;
+}
+
+input[type="checkbox"].accent-primary:checked {
+  background-color: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input[type="checkbox"].accent-primary:checked::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+  pointer-events: none;
+}
+
+input[type="checkbox"].accent-primary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="checkbox"].accent-primary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   Compatibility layer for existing Tailwind CDN templates
+   Many templates still use hardcoded "black" utility classes
+   for primary actions. Map them to var(--primary).
+------------------------------------------------------------ */
+
+.bg-black {
+  background-color: var(--primary) !important;
+}
+
+.border-black {
+  border-color: var(--primary) !important;
+}
+
+.hover\:border-black:hover {
+  border-color: var(--primary) !important;
+}
+
+.hover\:text-black:hover {
+  color: var(--primary) !important;
+}
+
+/* Tailwind ring utilities use --tw-ring-color */
+.ring-black {
+  --tw-ring-color: var(--primary) !important;
+}
+
+.focus\:ring-black:focus {
+  --tw-ring-color: var(--primary) !important;
+}
+
+.focus\:border-black:focus {
+  border-color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------
+   Primary utility classes (Tailwind-like)
+   Renderer uses Tailwind CDN, so these need to exist in CSS.
+   They read from:
+   - --primary (hex)
+   - --primary-rgb (space-separated "r g b") injected on <html>
+------------------------------------------------------------ */
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+/* Override bg-primary for disabled buttons to allow disabled: utilities to work
+   This rule has higher specificity than .bg-primary alone */
+button.bg-primary:disabled,
+button[disabled].bg-primary,
+button.bg-primary[disabled] {
+  background-color: #E5E7EB !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.ring-primary {
+  --tw-ring-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important;
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important;
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--primary) !important;
+}
+
+/* Opacity variants used in templates: bg-primary/10, bg-primary/20, etc */
+.bg-primary\/10 {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.1) !important;
+}
+
+.bg-primary\/20 {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important;
+}
+
+.bg-primary\/50 {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important;
+}
+
+.bg-primary\/80 {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important;
+}
+
+.bg-primary\/90 {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.9) !important;
+}
+
+.hover\:bg-primary\/10:hover {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.1) !important;
+}
+
+.hover\:bg-primary\/80:hover {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important;
+}
+
+.hover\:bg-primary\/20:hover {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important;
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: rgb(var(--primary-rgb, 43 162 111) / 0.9) !important;
+}
+
+.border-primary\/20 {
+  border-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important;
+}
+
+.border-primary\/50 {
+  border-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important;
+}
+
+.group:hover .group-hover\:border-primary\/50 {
+  border-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important;
+}
+
+.text-primary\/80 {
+  color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important;
+}
+
+.hover\:text-primary\/80:hover {
+  color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important;
+}
+
+/* ------------------------------------------------------------
+   Theme utility classes (driven by CSS variables above)
+   Use these in templates instead of hardcoded Tailwind colors
+   so colors can be controlled via globals.css.
+------------------------------------------------------------ */
+
+.bg-background { background-color: var(--background) !important; }
+.bg-surface { background-color: var(--surface) !important; }
+.bg-surface-hover { background-color: var(--surface-hover) !important; }
+.bg-products-bg { background-color: var(--products-bg) !important; }
+.bg-modal-bg { background-color: var(--modal-bg) !important; }
+.bg-input-bg { background-color: var(--input-bg) !important; }
+.bg-ai-input-bg { background-color: var(--ai-input-bg) !important; }
+.bg-btn-bg { background-color: var(--btn-bg) !important; }
+.bg-testimonials-bg { background-color: var(--testimonials-bg) !important; }
+
+.text-foreground { color: var(--foreground) !important; }
+.text-muted { color: var(--muted) !important; }
+.text-subtle { color: var(--subtle) !important; }
+.text-description { color: var(--description-color) !important; }
+.text-primary-foreground { color: var(--primary-foreground) !important; }
+
+.border-border { border-color: var(--border) !important; }
+.border-border-strong { border-color: var(--border-strong) !important; }
+.border-checkout-border { border-color: var(--checkout-border) !important; }
+.border-checkout-border-strong { border-color: var(--checkout-border) !important; }
+.border-get-direction-btn-border { border-color: var(--get-direction-btn-border) !important; }
+
+.placeholder-muted::placeholder { color: var(--muted) !important; opacity: 1; }
+
+/* Helpful defaults for common elements */
+body { background: var(--background); color: var(--foreground); }
+
+/* Hover helpers (Tailwind-like naming) */
+.hover\:bg-surface-hover:hover { background-color: var(--surface-hover) !important; }
+.hover\:bg-surface:hover { background-color: var(--surface) !important; }
+.hover\:bg-get-direction-btn-hover:hover { background-color: var(--get-direction-btn-hover) !important; }
+.hover\:text-foreground:hover { color: var(--foreground) !important; }
+.hover\:text-muted:hover { color: var(--muted) !important; }
+
+/* Quantity controls: surface hover only when not disabled */
+.enabled\:hover\:bg-surface-hover:enabled:hover { background-color: var(--surface-hover) !important; }
+.disabled\:opacity-50:disabled { opacity: 0.5 !important; }
+.disabled\:cursor-not-allowed:disabled { cursor: not-allowed !important; }
+.enabled\:cursor-pointer:enabled { cursor: pointer !important; }
+
+/* Override for Tailwind disabled: utility classes - these have higher specificity
+   and will override the general disabled rule above */
+button.bg-primary.disabled\:bg-gray-400:disabled,
+button[disabled].bg-primary.disabled\:bg-gray-400 {
+  background-color: #9CA3AF !important;
+}
+
+button.bg-primary.disabled\:bg-gray-300:disabled,
+button[disabled].bg-primary.disabled\:bg-gray-300 {
+  background-color: #D1D5DB !important;
+}
+
+button.bg-primary.disabled\:bg-\[#E5E7EB\]:disabled,
+button[disabled].bg-primary.disabled\:bg-\[#E5E7EB\] {
+  background-color: #E5E7EB !important;
+}
+
+
+
+/* ------------------------------------------------------------
+   Primary utility classes (Tailwind-like)
+   This is appended globally so any template gets bg-primary support.
+   Reads from:
+   - --primary (hex)
+   - --primary-rgb (space-separated "r g b") injected on <html>
+------------------------------------------------------------ */
+
+.bg-primary { background-color: var(--primary) !important; }
+.text-primary { color: var(--primary) !important; }
+.border-primary { border-color: var(--primary) !important; }
+
+.ring-primary { --tw-ring-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important; }
+.focus\:ring-primary:focus { --tw-ring-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important; }
+.focus\:border-primary:focus { border-color: var(--primary) !important; }
+
+.bg-primary\/10 { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.1) !important; }
+.bg-primary\/20 { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important; }
+.bg-primary\/50 { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important; }
+.bg-primary\/80 { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important; }
+.bg-primary\/90 { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.9) !important; }
+
+.hover\:bg-primary\/20:hover { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important; }
+.hover\:bg-primary\/80:hover { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important; }
+.hover\:bg-primary\/90:hover { background-color: rgb(var(--primary-rgb, 43 162 111) / 0.9) !important; }
+
+.border-primary\/20 { border-color: rgb(var(--primary-rgb, 43 162 111) / 0.2) !important; }
+.border-primary\/50 { border-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important; }
+.group:hover .group-hover\:border-primary\/50 { border-color: rgb(var(--primary-rgb, 43 162 111) / 0.5) !important; }
+
+.text-primary\/80 { color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important; }
+.hover\:text-primary\/80:hover { color: rgb(var(--primary-rgb, 43 162 111) / 0.8) !important; }
+
+/* 
+ * Component-level feedback states
+ * 
+ * The cart functionality automatically adds data attributes for component-level feedback:
+ * - data-loading: Set when an action is in progress
+ * - data-success: Set when an action completes successfully
+ * - data-failed: Set when an action fails
+ * 
+ * These attributes are added to:
+ * - Add to cart buttons ([data-add-to-cart])
+ * - Buy now buttons ([data-buy-now])
+ * - Product containers ([data-product-container])
+ * - Cart items ([data-cart-item])
+ * - Quantity buttons ([data-quantity-increase], [data-quantity-decrease])
+ * - Remove item buttons ([data-remove-cart-item])
+ * 
+ * Example usage:
+ */
+
+/* Loading state - show spinner or disable interactions */
+[data-add-to-cart][data-loading],
+[data-buy-now][data-loading],
+[data-product-container][data-loading],
+[data-cart-item][data-loading] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+[data-buy-now] [data-buy-now-loading] {
+    display: none;
+}
+[data-buy-now][data-loading="true"] [data-buy-now-default] {
+    display: none;
+}
+[data-buy-now][data-loading="true"] [data-buy-now-loading] {
+    display: inline-flex;
+    color: #1f2937 !important;
+}
+[data-buy-now][data-loading="true"] [data-buy-now-loading] i {
+    color: #1f2937 !important;
+}
+
+[data-quantity-increase][data-loading],
+[data-quantity-decrease][data-loading] {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+[data-remove-cart-item][data-loading] {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Success state - show success indicator */
+[data-add-to-cart][data-success],
+[data-product-container][data-success] {
+    /* Add your success styling here */
+    /* Example: border-color: green; */
+}
+
+[data-cart-item][data-success] {
+    /* Add your success styling here */
+    /* Example: background-color: rgba(34, 197, 94, 0.1); */
+}
+
+[data-quantity-increase][data-success],
+[data-quantity-decrease][data-success] {
+    /* Add your success styling here */
+    /* Example: background-color: rgba(34, 197, 94, 0.2); */
+}
+
+/* Failed state - show error indicator */
+[data-add-to-cart][data-failed],
+[data-product-container][data-failed] {
+    /* Add your error styling here */
+    /* Example: border-color: red; */
+}
+
+[data-cart-item][data-failed] {
+    /* Add your error styling here */
+    /* Example: background-color: rgba(239, 68, 68, 0.1); */
+}
+
+[data-quantity-increase][data-failed],
+[data-quantity-decrease][data-failed],
+[data-remove-cart-item][data-failed] {
+    /* Add your error styling here */
+    /* Example: background-color: rgba(239, 68, 68, 0.2); */
+}
+
+/* Example: Add spinner icon to loading buttons */
+[data-quantity-increase][data-loading] i,
+[data-quantity-decrease][data-loading] i {
+    display: none;
+}
+
+[data-quantity-increase][data-loading]::before,
+[data-quantity-decrease][data-loading]::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 
+ * Products Listing Page States
+ * 
+ * The products listing functionality automatically adds data attributes:
+ * - data-loading: Set when products are being loaded
+ * 
+ * These attributes are added to:
+ * - Products listing container ([data-products-listing])
+ * - Apply filters button ([data-apply-filters])
+ * - Sort select ([data-sort-select])
+ * - Load more section ([data-load-more])
+ * 
+ * Example usage:
+ */
+
+[data-products-listing][data-loading] {
+    opacity: 0.7;
+}
+
+[data-apply-filters][data-loading],
+[data-sort-select][data-loading] {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+[data-load-more][data-loading] {
+    opacity: 0.6;
+}
+
+input[type="text"][data-coupon-code-input] {
+    font-size: 14px !important;
+}
+
+[data-cart-page] [data-cart-page-header-divider] {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 639px) {
+    [data-cart-page] [data-cart-page-header-divider] {
+        margin-top: 1rem;
+    }
+}
+
+[data-coupon-apply-button]:hover:not(:disabled):not([data-loading="true"]),
+[data-save-edit-customisation]:hover:not(:disabled):not([data-loading="true"]) {
+    background-color: rgb(var(--primary-rgb, 43 162 111) / 0.12) !important;
+}
+
+@media (max-width: 639px) {
+    [data-cart-item-name] {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        overflow: hidden;
+        white-space: normal;
+    }
+}
